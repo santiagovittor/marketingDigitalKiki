@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-areas: "topArea" "intro" "spirit" "brandBanner" "portfolio" "footer";
+  width: 100%;
+  height: fit-content;
+}
+
+#landingPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  filter: saturate(3) blur(1px);
+  background: url(https://images.freeimages.com/images/large-previews/53d/daisies-2-1398443.jpg) center fixed;
+  background-size: cover;
+}
+
+.button__landing {
+  display: grid;
+  color: #E1261A;
+  border: transparent;
+  background-color: transparent;
+  font-size: 15vh;
+  border-radius: 5vh;
+  padding: 0 5vh 0 5vh;
+  cursor: pointer;
+  font-family: 'Laila', sans-serif;
+}
+
+.button__landing:hover {
+  color: #f52d30;
+  transition: .5s;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+header {
+  display: grid;
+  grid-area: topArea;
+  background: url(https://images.freeimages.com/images/large-previews/b9b/ocean-1142861.jpg) center fixed;
+  background-size: cover;
+  font-family: 'Laila', sans-serif;
+  height: fit-content;
+  width: 100%;
+  height: fit-content;
+}
+
+header h2 {
+  color: #612851;
+  font-size: 5vh;
+  font-weight: 900;
+  padding-bottom: 2vh;
+}
+
+header p {
+  font-size: 3vh;
+  font-weight: 500;
+}
+
+.headerCopy {
+  padding: 15% 0 0 10%;
+  width: 50%;
+  margin-bottom: 30vh;
+}
+
+.navBar {
+  grid-area: navBar;
+  display: flex;
+  background-color: white;
+  padding: 1rem 1rem 0 1rem;
+  position: fixed;
+  z-index: 1;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  color: #612851;
+  max-height: fit-content;
+}
+
+.navBarItems {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4vh;
+}
+
+.navBarItems li {
+  padding: 1vh 3vh 0 3vh;
+}
+
+.navBarItems li:hover {
+  transform: scale(1.2);
+  color: #f82b1c;
+  transition: .5s;
+  cursor: pointer;
+}
+
+#navBarLogo {
+  font-size: 6vh;
+}
+
+#navBarToggleButton {
+  color: #612851;
+  display: flex;
+  order: 3;
+  align-items: center;
+  background-color: transparent;
+  border: transparent;
+}
+
+@media only screen and (max-width: 425px) {
+  .navBarItems {
+    flex-direction: column;
+  }
+  #navBarToggleButton {
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navBar {
+    padding: 0;
+    display: grid;
+    grid-template-areas: "logo items items boton";
+  }
+  .navBarItems {
+    flex-flow: row wrap;
+    grid-area: items;
+    margin: 0;
+    font-size: 3vh;
+  }
+  #navBarLogo {
+    display: grid;
+    grid-area: logo;
+    transform: scale(0.5);
+  }
+  #navBarToggleButton {
+    display: grid;
+    grid-area: boton;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .navBar {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "logo boton" "items items";
+  }
+  .navBarItems {
+    flex-flow: column wrap;
+  }
+}
+
+.introductionContainer {
+  grid-area: intro;
+  background-color: #FFFFFF;
+  height: fit-content;
+  display: grid;
+  grid-template-areas: "textCopy" "boxes";
+  justify-content: center;
+  align-items: center;
+  font-family: 'Laila', sans-serif;
+}
+
+.introductionContainer__copy {
+  display: grid;
+  height: 100%;
+  grid-area: textCopy;
+  padding: 10% 25% 5% 25%;
+}
+
+.introductionContainer__copy h1 {
+  font-size: 5vh;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.introductionContainer__copy h3 {
+  font-size: 2vh;
+  letter-spacing: 0.1vh;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: #612851;
+}
+
+.introductionContainer__copy p {
+  font-size: 2vh;
+  color: grey;
+}
+
+.introductionContainer__boxesContainer {
+  grid-area: boxes;
+  height: 100%;
+  color: #612851;
+  display: grid;
+  padding: 0 10% 10% 10%;
+  grid-template-columns: repeat(3, minmax(100px, 200px));
+  grid-gap: 20%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.introductionContainer__boxesContainer--box {
+  display: grid;
+  grid-template-areas: "img" "titulo" "texto";
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.introductionContainer__boxesContainer--box p {
+  grid-area: texto;
+  color: grey;
+}
+
+.introductionContainer__boxesContainer--box img {
+  grid-area: img;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  height: 75%;
+}
+
+@media only screen and (max-width: 768px) {
+  .introductionContainer__boxesContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.spiritContainer {
+  grid-area: spirit;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: url(https://images.freeimages.com/images/large-previews/4b8/sunflowers-field-1403855.jpg) center fixed;
+  background-size: cover;
+  height: auto;
+  font-family: 'Laila', sans-serif;
+}
+
+.spiritContainer__box {
+  width: fit-content;
+  padding: 10vh;
+  border-radius: 1vh;
+  margin: 10% 15% 10% 15%;
+  background-color: white;
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+}
+
+.spiritContainer__box h1 {
+  width: 100%;
+  font-size: 4vh;
+  font-weight: bold;
+  padding-bottom: 3vh;
+  color: #612851;
+}
+
+.spiritContainer__box h3 {
+  color: grey;
+  font-weight: 400;
+  padding-bottom: 3vh;
+}
+
+.spiritContainer__box hr {
+  color: #612851;
+}
+
+.brandBannerContainer {
+  grid-area: brandBanner;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  background-color: white;
+}
+
+.brandBannerContainer ul {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  margin: 2rem;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.brandBannerContainer ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25vh;
+  height: 10vh;
+  margin: 1vh;
+}
+
+.brandBannerContainer ul li img {
+  width: 10rem;
+}
+/*# sourceMappingURL=estilos.css.map */

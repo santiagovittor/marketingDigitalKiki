@@ -1,0 +1,27 @@
+.brandBannerContainer{
+    grid-area: brandBanner;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: white;
+    & ul{
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        margin: 2rem;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        & li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25vh;
+            height: 10vh;
+            margin: 1vh;
+            & img{
+                width: 10rem;
+            }
+        }
+    }
+}

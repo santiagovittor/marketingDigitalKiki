@@ -1,0 +1,36 @@
+$fancyBoxShadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);   
+$mainPurple:#612851;
+
+
+.spiritContainer{
+    grid-area: spirit;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: url(https://images.freeimages.com/images/large-previews/4b8/sunflowers-field-1403855.jpg) center fixed;
+    background-size: cover;
+    height: auto;
+    font-family: 'Laila', sans-serif;
+    &__box{
+        width: fit-content;
+        padding: 10vh;
+        border-radius: 1vh;
+        margin: 10% 15% 10% 15%;
+        background-color: white;
+        box-shadow: $fancyBoxShadow;
+        & h1{
+            width: 100%;
+            font-size: 4vh;
+            font-weight: bold;
+            padding-bottom: 3vh;
+            color: $mainPurple;
+        }
+        & h3{
+            color: grey;
+            font-weight: 400;
+            padding-bottom: 3vh;
+        }
+        & hr{
+            color: $mainPurple;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+$mainRojo:#E1261A;
+$mainRojoFocus:#f82b1c;
+$mainPurple: #612851;
+
+.introductionContainer{
+    grid-area: intro;
+    background-color: #FFFFFF;
+    height: fit-content;
+    display: grid;
+    grid-template-areas: "textCopy"
+                        "boxes";
+    justify-content: center;
+    align-items: center;
+    font-family: 'Laila', sans-serif;
+    &__copy{
+        display: grid;
+        height: 100%;
+        grid-area: textCopy;
+        padding: 10% 25% 5% 25%;
+        & h1{
+            font-size: 5vh;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+        & h3{
+            font-size: 2vh;
+            letter-spacing: 0.1vh;
+            margin-left: 20%;
+            margin-right: 20%;
+            color: $mainPurple;
+        }
+        & p{
+            font-size: 2vh;
+            color: grey;
+        }
+    }
+    &__boxesContainer{
+        grid-area: boxes;
+        height: 100%;
+        color: $mainPurple;
+        display: grid;
+        padding: 0 10% 10% 10%;
+        grid-template-columns: repeat(3, minmax(100px, 200px));
+        grid-gap: 20%;
+        justify-content: center;
+        align-items: flex-start;
+        &--box{
+            display: grid;
+            grid-template-areas: "img"
+                                "titulo"
+                                "texto";
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+                        & p{
+                            grid-area: texto;
+                color: grey;
+            }
+            & img{
+                grid-area:img;
+                margin-right: auto;
+                margin-left: auto;
+                width: 50%;
+                height: 75%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .introductionContainer__boxesContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
