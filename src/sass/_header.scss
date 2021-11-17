@@ -25,7 +25,7 @@ header{
 }
 
 .headerCopy{
-    padding: 15% 0 0 10%;
+    padding: 15% 0 0 1%;
     width: 50%;
     margin-bottom: 30vh;
     }
@@ -33,16 +33,36 @@ header{
 .navBar{
     grid-area: navBar;
     display: flex;
-    background-color: white;
+    background-color: transparent;
     padding: 1rem 1rem 0 1rem;
-    position: fixed;
     z-index: 1;
+    position: fixed;
     justify-content: space-between;
     flex-flow: row wrap;
-    box-shadow: $fancyBoxShadow;
     width: 100%;
     color: $mainPurple;
     max-height: fit-content;
+    transition: 1s;
+    &:hover{
+        box-shadow: $fancyBoxShadow;
+        background-color: white;
+
+    }
+    &__onScroll{
+        grid-area: navBar;
+        display: flex;
+        background-color: white;
+        padding: 1rem 1rem 0 1rem;
+        position: fixed;
+        z-index: 1;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        width: 100%;
+        color: $mainPurple;
+        max-height: fit-content;
+        box-shadow: $fancyBoxShadow;
+        transition: 1s;
+    }
 }
 
 .navBarItems{
@@ -77,17 +97,14 @@ header{
     
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 1024px) {
 
     .navBarItems{
-        flex-direction: column;
-    }
-    
-    #navBarToggleButton{
-        align-items: center;
+        font-size: 2vh;
     }
 
 }
+
 
 @media only screen and (max-width: 768px) {
 
@@ -96,6 +113,11 @@ header{
         padding: 0;
         display: grid;
         grid-template-areas: "logo items items boton";
+        &__onScroll{
+            padding: 0;
+            display: grid;
+            grid-template-areas: "logo items items boton";
+        }
     }
     .navBarItems{
         flex-flow: row wrap;
@@ -106,7 +128,6 @@ header{
     #navBarLogo{
         display: grid;
         grid-area: logo;
-        transform: scale(0.5);
     }
     #navBarToggleButton{
         display: grid;
@@ -119,13 +140,28 @@ header{
 
 @media only screen and (max-width: 425px) {
 
+    
+    .headerCopy{
+        padding-top: 30%;
+    }
 
+    #navBarToggleButton{
+        align-items: center;
+    }
     .navBar{
         display: grid;
         justify-content: center;
         align-items: center;
         grid-template-areas: "logo boton"
                                 "items items";
+                                
+      &__onScroll{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: "logo boton"
+                                "items items";
+      }                          
     }
     .navBarItems{
         flex-flow: column wrap;

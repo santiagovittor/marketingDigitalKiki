@@ -4,6 +4,7 @@ $mainRojo:#E1261A;
     display: flex;
     align-items: center;
     justify-content: center;
+    place-content: center;
     width: 100%;
     min-height: 100vh;
     filter: saturate(3) blur(1px);

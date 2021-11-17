@@ -24,6 +24,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  place-content: center;
   width: 100%;
   min-height: 100vh;
   filter: saturate(3) blur(1px);
@@ -77,12 +78,32 @@ header p {
 }
 
 .headerCopy {
-  padding: 15% 0 0 10%;
+  padding: 15% 0 0 1%;
   width: 50%;
   margin-bottom: 30vh;
 }
 
 .navBar {
+  grid-area: navBar;
+  display: flex;
+  background-color: transparent;
+  padding: 1rem 1rem 0 1rem;
+  z-index: 1;
+  position: fixed;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: 100%;
+  color: #612851;
+  max-height: fit-content;
+  transition: 1s;
+}
+
+.navBar:hover {
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+.navBar__onScroll {
   grid-area: navBar;
   display: flex;
   background-color: white;
@@ -91,10 +112,11 @@ header p {
   z-index: 1;
   justify-content: space-between;
   flex-flow: row wrap;
-  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
   width: 100%;
   color: #612851;
   max-height: fit-content;
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  transition: 1s;
 }
 
 .navBarItems {
@@ -130,17 +152,19 @@ header p {
   border: transparent;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 1024px) {
   .navBarItems {
-    flex-direction: column;
-  }
-  #navBarToggleButton {
-    align-items: center;
+    font-size: 2vh;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .navBar {
+    padding: 0;
+    display: grid;
+    grid-template-areas: "logo items items boton";
+  }
+  .navBar__onScroll {
     padding: 0;
     display: grid;
     grid-template-areas: "logo items items boton";
@@ -154,7 +178,6 @@ header p {
   #navBarLogo {
     display: grid;
     grid-area: logo;
-    transform: scale(0.5);
   }
   #navBarToggleButton {
     display: grid;
@@ -163,7 +186,19 @@ header p {
 }
 
 @media only screen and (max-width: 425px) {
+  .headerCopy {
+    padding-top: 30%;
+  }
+  #navBarToggleButton {
+    align-items: center;
+  }
   .navBar {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "logo boton" "items items";
+  }
+  .navBar__onScroll {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -251,6 +286,19 @@ header p {
   }
 }
 
+@media only screen and (max-width: 425px) {
+  .introductionContainer__copy {
+    padding: 10vh;
+  }
+  .introductionContainer__copy h1 {
+    padding-top: 3vh;
+  }
+  .introductionContainer__copy p {
+    font-size: 3vh;
+    padding-top: 3vh;
+  }
+}
+
 .spiritContainer {
   grid-area: spirit;
   display: grid;
@@ -288,6 +336,18 @@ header p {
   color: #612851;
 }
 
+@media only screen and (max-width: 768px) {
+  .spiritContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .spiritContainer__box {
+    padding: 5vh;
+  }
+}
+
 .brandBannerContainer {
   grid-area: brandBanner;
   display: flex;
@@ -317,5 +377,14 @@ header p {
 
 .brandBannerContainer ul li img {
   width: 10rem;
+}
+
+@media only screen and (max-width: 425px) {
+  .brandBannerContainer ul {
+    flex-flow: column wrap;
+  }
+  .brandBannerContainer ul li {
+    margin: 3vh auto 3vh auto;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */

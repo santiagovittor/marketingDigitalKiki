@@ -34,3 +34,19 @@ $mainPurple:#612851;
         }
     }
 }
+
+@media only screen and (max-width: 768px) {
+
+    .spiritContainer{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+@media only screen and (max-width: 425px) {
+
+    .spiritContainer__box{
+        padding: 5vh;
+    }
+    
+}

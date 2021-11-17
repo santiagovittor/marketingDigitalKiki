@@ -75,3 +75,18 @@ $mainPurple: #612851;
     }
     
 }
+
+@media only screen and (max-width: 425px) {
+
+    .introductionContainer__copy{
+        padding: 10vh;
+        & h1{
+            padding-top: 3vh;
+        }
+        & p{
+                font-size: 3vh;
+                padding-top: 3vh;
+        }
+    }
+    
+}
