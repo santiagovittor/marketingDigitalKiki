@@ -71,7 +71,7 @@ header{
     margin-left: 20%;
     justify-content: space-between;
     align-items: center;
-    font-size: 4vh;
+    font-size: 3vh;
     & li{
         padding: 1vh 3vh 0 3vh;
         &:hover{
@@ -150,15 +150,14 @@ header{
     }
     .navBar{
         display: grid;
-        justify-content: center;
-        align-items: center;
+        width: 100vw;
         grid-template-areas: "logo boton"
                                 "items items";
+
                                 
       &__onScroll{
         display: grid;
-        justify-content: center;
-        align-items: center;
+        width: 100vw;
         grid-template-areas: "logo boton"
                                 "items items";
       }                          

@@ -2,6 +2,7 @@ import BrandBanner from "../brandBanner/BrandBanner";
 import Header from "../header/Header";
 import Introduction from "../introduction/Introduction";
 import Spirit from "../spirit/Spirit";
+import WhatsappButton from "../whatsappButton/WhatsappButton";
 
 const MainPage = () => {
     return ( 
@@ -11,6 +12,7 @@ const MainPage = () => {
         <Introduction/>
         <Spirit/>
         <BrandBanner/>
+        <WhatsappButton/>
         </div>
         </>
      );

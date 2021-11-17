@@ -3,9 +3,9 @@ const NavBarItems = () => {
         <>
         <ul className="navBarItems">
             <li>Inicio</li>
-            <li>Menú</li>
-            <li>Menú</li>
-            <li>Menú</li>
+            <li>Marketing Digital</li>
+            <li>Diseño Web</li>
+            <li>E-Commerce</li>
             <li>Contacto</li>
         </ul>
         </>

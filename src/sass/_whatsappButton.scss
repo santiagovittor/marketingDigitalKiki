@@ -1,0 +1,45 @@
+$fancyBoxShadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);   
+
+
+#whatsappButtonContainer{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    height: 7vh;
+    width: 40vh;
+    z-index: 2;
+    bottom: 40px;
+	right: 40px;
+    opacity: 0.9;
+    border: none;
+    box-shadow: $fancyBoxShadow;
+    border-radius: 0.5vh;
+    background-color: #20B038;
+    font-family: 'Laila', sans-serif;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.05);
+        transition: .5s;
+        opacity: 1;
+        filter: saturate(1.25);
+    }
+}
+
+#whatsappButton{
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #whatsappButtonContainer{
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+        border-radius: 0;
+    }
+
+}

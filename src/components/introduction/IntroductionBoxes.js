@@ -1,6 +1,9 @@
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import marketing from "../../assets/svgs/marketing.svg"
+import eCommerce from "../../assets/svgs/e-commerce.svg"
+import webDevices from "../../assets/svgs/web-devices.svg"
 
 
 
@@ -15,27 +18,27 @@ const IntroductionBoxes = () => {
 
         <div className="introductionContainer__boxesContainer" >
                 <div className="introductionContainer__boxesContainer--box" data-aos="flip-left" data-aos-duration="2200">
-                    <img src="https://buhomedia.com.ar/wp-content/uploads/2018/06/rocket.svg" alt="img1"/>
+                    <img src={marketing} alt="img1"/>
                     <h1>
                     MARKETING ONLINE
                     </h1>
                     <p>
-                    Atraemos personas interesadas a tu negocio pero medio de campañas pubdivcitarias en las plataformas de Google Facebook e Instagram.
+                    Atraemos personas interesadas a tu negocio pero medio de campañas publicitarias en las plataformas de Google, Facebook e Instagram.
                     </p>
                 </div>
                 <div className="introductionContainer__boxesContainer--box" data-aos="flip-left" data-aos-duration="1700" > 
-                    <img src="https://buhomedia.com.ar/wp-content/uploads/2018/06/web-design.svg" alt="img2"/>
+                    <img src={webDevices} alt="img2"/>
                     <h1>
                     DISEÑO WEB
                     </h1>
                     <p>
-                    Diseñamos páginas web para empresas y PyME que buscan mejorar su imagen en Internet e incrementar la interacción de sus clientes con su marca.
+                    Diseñamos sitios web para empresas y PyMEs que buscan mejorar su imagen en Internet e incrementar la interacción de sus clientes con su marca.
 
                     </p>
                 </div>
 
                 <div className="introductionContainer__boxesContainer--box" data-aos="flip-left" data-aos-duration="1200" >
-                    <img src="https://buhomedia.com.ar/wp-content/uploads/2018/06/online-shop.svg" alt="img3"/>
+                    <img src={eCommerce} alt="img3"/>
                     <h1>
                     E-COMMERCE
                     </h1>

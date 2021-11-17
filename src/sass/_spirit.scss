@@ -9,7 +9,6 @@ $mainPurple:#612851;
     background: url(https://images.freeimages.com/images/large-previews/4b8/sunflowers-field-1403855.jpg) center fixed;
     background-size: cover;
     height: auto;
-    font-family: 'Laila', sans-serif;
     &__box{
         width: fit-content;
         padding: 10vh;
@@ -21,16 +20,22 @@ $mainPurple:#612851;
             width: 100%;
             font-size: 4vh;
             font-weight: bold;
-            padding-bottom: 3vh;
+            padding: 1vh 1vh 3vh 1vh;
+            font-family: 'Laila', sans-serif;
             color: $mainPurple;
         }
         & h3{
             color: grey;
             font-weight: 400;
+            font-family: 'Laila', sans-serif;
             padding-bottom: 3vh;
         }
         & hr{
             color: $mainPurple;
+        }
+        & p{
+            font-family: 'Laila', sans-serif;
+            padding-top: 3vh;
         }
     }
 }
