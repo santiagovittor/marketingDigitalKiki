@@ -1,13 +1,23 @@
 const NavBarItems = () => {
     return ( 
         <>
-        <ul className="navBarItems">
-            <li>Inicio</li>
-            <li>Marketing Digital</li>
-            <li>Diseño Web</li>
-            <li>E-Commerce</li>
-            <li>Contacto</li>
-        </ul>
+        <div className="navBarItems">
+            <div className="navLinks">
+            <a>Inicio</a>
+            </div>
+            <div className="navLinks">
+            <a>Marketing Digital</a>
+            </div>
+            <div className="navLinks">
+            <a>Diseño Web</a>
+            </div>
+            <div className="navLinks">
+            <a>E-Commerce</a>
+            </div>
+            <div className="navLinks">
+            <a>Contacto</a>
+            </div>
+        </div>
         </>
 
      );

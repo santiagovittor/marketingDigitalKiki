@@ -23,7 +23,7 @@ const IntroductionBoxes = () => {
                     MARKETING ONLINE
                     </h1>
                     <p>
-                    Atraemos personas interesadas a tu negocio pero medio de campañas publicitarias en las plataformas de Google, Facebook e Instagram.
+                    Atraemos personas interesadas a tu negocio por medio de campañas publicitarias en las plataformas de Google, Facebook e Instagram.
                     </p>
                 </div>
                 <div className="introductionContainer__boxesContainer--box" data-aos="flip-left" data-aos-duration="1700" > 

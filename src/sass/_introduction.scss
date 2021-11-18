@@ -12,6 +12,7 @@ $mainPurple: #612851;
     justify-content: center;
     align-items: center;
     font-family: 'Laila', sans-serif;
+    text-align: center;
     &__copy{
         display: grid;
         height: 100%;
@@ -30,7 +31,8 @@ $mainPurple: #612851;
             color: $mainPurple;
         }
         & p{
-            font-size: 2vh;
+            padding-top: 3.5vh;
+            font-size: 3.5vh;
             color: grey;
         }
     }

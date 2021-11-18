@@ -1,0 +1,47 @@
+$mainPurple:#612851;
+
+#goTopArrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 8vh;
+    width: 8vh;
+    z-index: 2;
+    bottom: 100px;
+	right: 60px;
+    opacity: 0.5;
+    border: none;
+    box-shadow: $fancyBoxShadow;
+    border-radius: 100%;
+    background-color: rgb(77, 77, 77);
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+    }
+    & button{
+        color: transparent;
+        border: none;
+        border-radius: 100%;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        &:hover{
+            background-color: $mainPurple ;
+            transition: .5s;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    #goTopArrow{
+        bottom: 50px;
+        right: 20px;
+
+    
+
+    }
+
+
+}

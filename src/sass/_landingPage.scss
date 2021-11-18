@@ -7,6 +7,7 @@ $mainRojo:#E1261A;
     place-content: center;
     width: 100%;
     min-height: 100vh;
+    max-height: fit-content;
     filter: saturate(3) blur(1px);
     background: url(https://images.freeimages.com/images/large-previews/53d/daisies-2-1398443.jpg) center fixed;
     background-size: cover;

@@ -20,7 +20,7 @@ const NavBar = () => {
   useEffect(() => {
     function onScroll() {
       let currentPosition = window.pageYOffset;
-      if (currentPosition < 200) {
+      if (currentPosition < 1) {
         setScrolling(false);
       } else {
         setScrolling(true);

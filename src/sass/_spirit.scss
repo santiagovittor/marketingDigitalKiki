@@ -5,13 +5,14 @@ $mainPurple:#612851;
 .spiritContainer{
     grid-area: spirit;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     background: url(https://images.freeimages.com/images/large-previews/4b8/sunflowers-field-1403855.jpg) center fixed;
     background-size: cover;
     height: auto;
+    text-align: center;
     &__box{
-        width: fit-content;
-        padding: 10vh;
+        width: 100&;
+        padding: 3.5vh;
         border-radius: 1vh;
         margin: 10% 15% 10% 15%;
         background-color: white;
@@ -20,7 +21,7 @@ $mainPurple:#612851;
             width: 100%;
             font-size: 4vh;
             font-weight: bold;
-            padding: 1vh 1vh 3vh 1vh;
+            padding-bottom: 5vh;
             font-family: 'Laila', sans-serif;
             color: $mainPurple;
         }
@@ -28,7 +29,7 @@ $mainPurple:#612851;
             color: grey;
             font-weight: 400;
             font-family: 'Laila', sans-serif;
-            padding-bottom: 3vh;
+            padding-bottom: 5vh;
         }
         & hr{
             color: $mainPurple;

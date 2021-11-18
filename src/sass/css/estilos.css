@@ -32,6 +32,7 @@ ul {
   place-content: center;
   width: 100%;
   min-height: 100vh;
+  max-height: fit-content;
   filter: saturate(3) blur(1px);
   background: url(https://images.freeimages.com/images/large-previews/53d/daisies-2-1398443.jpg) center fixed;
   background-size: cover;
@@ -133,15 +134,32 @@ header p {
   font-size: 3vh;
 }
 
-.navBarItems li {
+.navLinks {
   padding: 1vh 3vh 0 3vh;
+  position: relative;
+  display: inline-block;
 }
 
-.navBarItems li:hover {
-  transform: scale(1.2);
-  color: #f82b1c;
-  transition: .5s;
+.navLinks a {
+  color: #612851;
   cursor: pointer;
+}
+
+.navLinks a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  background-color: #612851;
+  transition: transform 0.3s;
+}
+
+.navLinks a:hover:after {
+  transform: scaleX(1);
 }
 
 #navBarLogo {
@@ -221,6 +239,7 @@ header p {
   justify-content: center;
   align-items: center;
   font-family: 'Laila', sans-serif;
+  text-align: center;
 }
 
 .introductionContainer__copy {
@@ -245,7 +264,8 @@ header p {
 }
 
 .introductionContainer__copy p {
-  font-size: 2vh;
+  padding-top: 3.5vh;
+  font-size: 3.5vh;
   color: grey;
 }
 
@@ -308,15 +328,16 @@ header p {
 .spiritContainer {
   grid-area: spirit;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   background: url(https://images.freeimages.com/images/large-previews/4b8/sunflowers-field-1403855.jpg) center fixed;
   background-size: cover;
   height: auto;
+  text-align: center;
 }
 
 .spiritContainer__box {
-  width: fit-content;
-  padding: 10vh;
+  width: 100 .spiritContainer__box;
+  padding: 3.5vh;
   border-radius: 1vh;
   margin: 10% 15% 10% 15%;
   background-color: white;
@@ -327,7 +348,7 @@ header p {
   width: 100%;
   font-size: 4vh;
   font-weight: bold;
-  padding: 1vh 1vh 3vh 1vh;
+  padding-bottom: 5vh;
   font-family: 'Laila', sans-serif;
   color: #612851;
 }
@@ -336,7 +357,7 @@ header p {
   color: grey;
   font-weight: 400;
   font-family: 'Laila', sans-serif;
-  padding-bottom: 3vh;
+  padding-bottom: 5vh;
 }
 
 .spiritContainer__box hr {
@@ -439,6 +460,49 @@ header p {
     right: 0px;
     width: 100%;
     border-radius: 0;
+  }
+}
+
+#goTopArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 8vh;
+  width: 8vh;
+  z-index: 2;
+  bottom: 100px;
+  right: 60px;
+  opacity: 0.5;
+  border: none;
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  background-color: #4d4d4d;
+  cursor: pointer;
+}
+
+#goTopArrow:hover {
+  opacity: 1;
+}
+
+#goTopArrow button {
+  color: transparent;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+#goTopArrow button:hover {
+  background-color: #612851;
+  transition: .5s;
+}
+
+@media only screen and (max-width: 425px) {
+  #goTopArrow {
+    bottom: 50px;
+    right: 20px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
