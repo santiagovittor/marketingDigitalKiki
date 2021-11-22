@@ -21,7 +21,7 @@ const BrandBanner = () => {
                 <img src="https://www.svgrepo.com/show/353798/google.svg" alt="googleLogo"/>
                 </li>
                 <li>
-                <img src="https://www.svgrepo.com/show/303274/instagram-1-logo.svg" alt="instagramLogo"/>
+                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/instagram_logo_icon_170643.png" alt="instagramLogo"/>
                 </li>
             </ul>
         </section>

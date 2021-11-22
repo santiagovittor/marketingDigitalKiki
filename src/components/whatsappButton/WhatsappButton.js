@@ -6,7 +6,7 @@ const WhatsappButton = () => {
 
         <div id="whatsappButtonContainer">
             <img src={whatsapp} alt="whatsapp icon"/>
-            <a target="blank" href="https://api.whatsapp.com/send?phone=+541162300345&text=Hola!" id="whatsappButton">Estamos atendiendo</a>
+            <a target="blank" href="https://api.whatsapp.com/send?phone=+541162300345&text=Hola!" id="whatsappButton">Contactate con nosotros</a>
         </div>
 
      );

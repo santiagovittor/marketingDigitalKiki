@@ -1,12 +1,12 @@
 import { useState,useEffect } from "react";
 import BrandBanner from "../brandBanner/BrandBanner";
+import ContactContainer from "../contact/ContactContainer";
 import GoTopArrow from "../goTopArrow/GoTopArrow";
 import Header from "../header/Header";
 import Introduction from "../introduction/Introduction";
 import Spirit from "../spirit/Spirit";
 import WhatsappButton from "../whatsappButton/WhatsappButton";
-import AOS from "aos";
-import 'aos/dist/aos.css';
+
 
 
 
@@ -14,12 +14,6 @@ const MainPage = () => {
 
     const [scrolling, setScrolling] = useState(false);
     const [scrollTop, setScrollTop] = useState(0);
-
-
-    useEffect(() =>{
-        AOS.init({duration: 1500})
-    },[]);
-
 
     useEffect(() => {
         function onScroll() {
@@ -45,7 +39,8 @@ const MainPage = () => {
         <Introduction/>
         <Spirit/>
         <BrandBanner/>
-        {scrolling? <GoTopArrow data-aos="flip-left"/> : <></>}
+        <ContactContainer/>
+        {scrolling? <GoTopArrow/> : <></>}
         <WhatsappButton/>
         </div>
         </>

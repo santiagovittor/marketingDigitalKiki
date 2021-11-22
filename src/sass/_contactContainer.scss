@@ -1,0 +1,149 @@
+$fancyBoxShadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);   
+$mainPurple:#612851;
+
+
+.contactContainer{
+    display: grid;
+    grid-area: contacto;
+    place-content: center;
+    height: fit-content;
+    padding: 10vh;
+    width: 100vw;
+    background-color: rgb(38, 38, 38);
+    &__form{
+        display: grid;
+        place-content: center;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 1vh 0 0 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: $fancyBoxShadow;
+        background-color: white;
+        width: 100%;
+        height: fit-content;
+        &--img{
+            background: url(https://images.freeimages.com/images/large-previews/c03/black-and-white-cat-1142706.jpg) center;
+            background-size: cover;
+            border-radius: 1vh 0 0 1vh;
+            width: 100%;
+            min-height: 150vh;   
+        }
+        &--text{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 10vh;
+            & h1{
+                font-family: 'Laila', sans-serif;
+                color: $mainPurple;
+                text-transform: uppercase;
+                text-align: center;
+                padding-bottom: 6vh;
+                padding-top: 3vh;
+            }
+            & p{
+                font-family: 'Laila', sans-serif;
+                padding-bottom: 3vh;
+                color: gray;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.inputContainer{
+    display: grid;
+    font-family: 'Laila', sans-serif;
+    font-weight: 500;
+    &__each{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0 1rem 0;
+        & input{
+            font-family: 'Laila', sans-serif;
+            border:none;
+            border-bottom: .5vh solid rgb(158, 158, 158);
+            &:focus{
+                outline: none;
+                border-bottom: .5vh solid $mainPurple;
+                transition: .2s;
+            }
+        }
+        &--error{
+            color: red;
+        }
+    }
+    &__button{
+        border: none;
+        font-family: 'Laila', sans-serif;
+        background-color: $mainPurple;
+        color: white;
+        border-radius: 1vh;
+        height: 8vh;
+        width: 16vh;
+        cursor: pointer;
+        box-shadow: $fancyBoxShadow;
+        &:hover{
+            filter: saturate(2);
+            transition: .5s;
+        }
+        &--disabled{
+            border: none;
+        font-family: 'Laila', sans-serif;
+        background-color: $mainPurple;
+        color: white;
+        border-radius: 1vh;
+        height: 8vh;
+        width: 16vh;
+        box-shadow: $fancyBoxShadow;
+        opacity: .5;
+        transition: .5s;
+        }
+        }
+
+    &__successAlert{
+        margin-top: 3vh;
+        padding: 3vh;
+        opacity: .9;
+        border-radius: 1vh;
+        box-shadow: $fancyBoxShadow;
+        background-color: #20B038;
+        border: solid 2px #0b9121;
+        color: white;
+        
+    }
+    }
+
+
+@media only screen and (max-width: 768px) {
+
+
+    .contactContainer{
+        border-radius: 1vh;
+    &__form{
+        display: grid;
+        border-radius: 1vh;
+        grid-template-columns: 1fr;
+        grid-template-areas: "foto"
+                             "formulario"
+                             "formulario" ;
+
+    &--img{
+        width: 100%;
+        display: grid;
+        grid-area: foto;
+    }
+    &--text{
+        display: grid ;
+        grid-area: formulario;
+        & h1{
+            text-align: center;
+        }
+    }                             
+    }
+    }
+}
+
