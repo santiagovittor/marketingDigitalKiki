@@ -6,7 +6,7 @@ import Header from "../header/Header";
 import Introduction from "../introduction/Introduction";
 import Spirit from "../spirit/Spirit";
 import WhatsappButton from "../whatsappButton/WhatsappButton";
-
+import Footer from "../footer/Footer";
 
 
 
@@ -42,6 +42,7 @@ const MainPage = () => {
         <ContactContainer/>
         {scrolling? <GoTopArrow/> : <></>}
         <WhatsappButton/>
+        <Footer/>
         </div>
         </>
      );

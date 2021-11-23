@@ -1,0 +1,62 @@
+$fancyBoxShadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);   
+$mainPurple:#612851;
+
+
+.footerContainer{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    width: 100vw;
+    height: fit-content;
+    color: black;
+    padding: 6vh;
+    background-color: white;
+    border: none;
+    &__column{
+        height: 100%;
+        margin: 4vh;
+        display: grid;
+        justify-content: center;
+        color: black;
+        font-family: 'Laila', sans-serif;
+        &--brand{
+            width: 25%;
+            font-family: 'Laila', sans-serif;
+            line-height: 1.5rem;
+        }
+        & h3{
+            padding-bottom: 3vh;
+        }
+        & ul li{
+            display: grid;
+            place-content: center;
+            padding: 1vh;
+        }
+        & a{
+            color: black;
+            &:hover{
+                color: $mainPurple;
+                transition: .5s;
+            }
+        }
+    }
+    &__footer{
+        display: grid;
+        font-family: 'Laila', sans-serif;
+        place-content: center;
+        justify-content: center;
+        min-height: 25vh;
+        color: #666666;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footerContainer{
+        display: flex;
+        place-content: center;
+        flex-flow: wrap column;
+        &__column--brand{
+            width: 100%;
+        }
+    }
+}

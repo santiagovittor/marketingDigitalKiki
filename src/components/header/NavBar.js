@@ -10,7 +10,6 @@ const NavBar = () => {
     const [navBarOpen,setNavBarOpen] = useState(false)
     const [scrolling, setScrolling] = useState(false);
     const [scrollTop, setScrollTop] = useState(0);
-
     
     const handleToggle = () =>{
         setNavBarOpen(prev => !prev)

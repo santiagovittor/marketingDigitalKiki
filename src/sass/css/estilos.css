@@ -128,7 +128,6 @@ header p {
 .navBarItems {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 20%;
   justify-content: space-between;
   align-items: center;
   font-size: 3vh;
@@ -159,6 +158,10 @@ header p {
 }
 
 .navLinks a:hover:after {
+  transform: scaleX(1);
+}
+
+.navLinks a.active:after {
   transform: scaleX(1);
 }
 
@@ -196,7 +199,7 @@ header p {
     flex-flow: row wrap;
     grid-area: items;
     margin: 0;
-    font-size: 3vh;
+    font-size: 2vh;
   }
   #navBarLogo {
     display: grid;
@@ -232,13 +235,13 @@ header p {
 
 .introductionContainer {
   grid-area: intro;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: fit-content;
   display: grid;
   grid-template-areas: "textCopy" "boxes";
   justify-content: center;
   align-items: center;
-  font-family: 'Laila', sans-serif;
+  font-family: "Laila", sans-serif;
   text-align: center;
 }
 
@@ -279,6 +282,7 @@ header p {
   grid-gap: 20%;
   justify-content: center;
   align-items: flex-start;
+  font-size: 2vh;
 }
 
 .introductionContainer__boxesContainer--box {
@@ -470,7 +474,7 @@ header p {
   height: 8vh;
   width: 8vh;
   z-index: 2;
-  bottom: 100px;
+  bottom: 160px;
   right: 60px;
   opacity: 0.5;
   border: none;
@@ -500,7 +504,7 @@ header p {
 
 @media only screen and (max-width: 425px) {
   #goTopArrow {
-    bottom: 50px;
+    bottom: 60px;
     right: 20px;
   }
 }
@@ -513,6 +517,7 @@ header p {
   padding: 10vh;
   width: 100vw;
   background-color: #262626;
+  border: none;
 }
 
 .contactContainer__form {
@@ -588,6 +593,7 @@ header p {
 
 .inputContainer__each--error {
   color: red;
+  padding-bottom: 2vh;
 }
 
 .inputContainer__button {
@@ -652,6 +658,72 @@ header p {
   }
   .contactContainer__form--text h1 {
     text-align: center;
+  }
+}
+
+.footerContainer {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+  width: 100vw;
+  height: fit-content;
+  color: black;
+  padding: 6vh;
+  background-color: white;
+  border: none;
+}
+
+.footerContainer__column {
+  height: 100%;
+  margin: 4vh;
+  display: grid;
+  justify-content: center;
+  color: black;
+  font-family: 'Laila', sans-serif;
+}
+
+.footerContainer__column--brand {
+  width: 25%;
+  font-family: 'Laila', sans-serif;
+  line-height: 1.5rem;
+}
+
+.footerContainer__column h3 {
+  padding-bottom: 3vh;
+}
+
+.footerContainer__column ul li {
+  display: grid;
+  place-content: center;
+  padding: 1vh;
+}
+
+.footerContainer__column a {
+  color: black;
+}
+
+.footerContainer__column a:hover {
+  color: #612851;
+  transition: .5s;
+}
+
+.footerContainer__footer {
+  display: grid;
+  font-family: 'Laila', sans-serif;
+  place-content: center;
+  justify-content: center;
+  min-height: 25vh;
+  color: #666666;
+}
+
+@media only screen and (max-width: 768px) {
+  .footerContainer {
+    display: flex;
+    place-content: center;
+    flex-flow: wrap column;
+  }
+  .footerContainer__column--brand {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

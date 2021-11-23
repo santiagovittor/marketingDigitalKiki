@@ -1,7 +1,7 @@
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 
 
 
@@ -16,19 +16,19 @@ const NavBarItems = () => {
         <>
         <div className="navBarItems" data-aos="fade">
             <div className="navLinks">
-            <Link to="/main">Inicio</Link>
+            <NavLink to="/main" >Inicio</NavLink>
             </div>
             <div className="navLinks">
-            <Link to="/main">Marketing Digital</Link>
+            <NavLink to="/marketing-digital">Marketing Digital</NavLink>
             </div>
             <div className="navLinks">
-            <Link to="/main">Diseño Web</Link>
+            <NavLink to="/diseño-web">Diseño Web</NavLink>
             </div>
             <div className="navLinks">
-            <Link to="/main">E-Commerce</Link>
+            <NavLink to="/e-commerce">E-Commerce</NavLink>
             </div>
             <div className="navLinks">
-            <Link to="/main">Contacto</Link>
+            <NavLink to="/contacto">Contacto</NavLink>
             </div>
         </div>
         </>

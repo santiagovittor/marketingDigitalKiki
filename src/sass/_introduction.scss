@@ -1,42 +1,43 @@
-$mainRojo:#E1261A;
-$mainRojoFocus:#f82b1c;
+$mainRojo: #e1261a;
+$mainRojoFocus: #f82b1c;
 $mainPurple: #612851;
 
-.introductionContainer{
+.introductionContainer {
     grid-area: intro;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     height: fit-content;
     display: grid;
-    grid-template-areas: "textCopy"
-                        "boxes";
+    grid-template-areas:
+        "textCopy"
+        "boxes";
     justify-content: center;
     align-items: center;
-    font-family: 'Laila', sans-serif;
+    font-family: "Laila", sans-serif;
     text-align: center;
-    &__copy{
+    &__copy {
         display: grid;
         height: 100%;
         grid-area: textCopy;
         padding: 10% 25% 5% 25%;
-        & h1{
+        & h1 {
             font-size: 5vh;
             margin-left: 15%;
             margin-right: 15%;
         }
-        & h3{
+        & h3 {
             font-size: 2vh;
             letter-spacing: 0.1vh;
             margin-left: 20%;
             margin-right: 20%;
             color: $mainPurple;
         }
-        & p{
+        & p {
             padding-top: 3.5vh;
             font-size: 3.5vh;
             color: grey;
         }
     }
-    &__boxesContainer{
+    &__boxesContainer {
         grid-area: boxes;
         height: 100%;
         color: $mainPurple;
@@ -46,20 +47,22 @@ $mainPurple: #612851;
         grid-gap: 20%;
         justify-content: center;
         align-items: flex-start;
-        &--box{
+        font-size: 2vh;
+        &--box {
             display: grid;
-            grid-template-areas: "img"
-                                "titulo"
-                                "texto";
+            grid-template-areas:
+                "img"
+                "titulo"
+                "texto";
             justify-content: center;
             align-items: center;
             width: 100%;
-                        & p{
-                            grid-area: texto;
+            & p {
+                grid-area: texto;
                 color: grey;
             }
-            & img{
-                grid-area:img;
+            & img {
+                grid-area: img;
                 margin-right: auto;
                 margin-left: auto;
                 width: 100%;
@@ -70,28 +73,24 @@ $mainPurple: #612851;
 }
 
 @media only screen and (max-width: 768px) {
-
-    .introductionContainer__boxesContainer{
+    .introductionContainer__boxesContainer {
         display: flex;
         flex-direction: column;
-        &--box{
+        &--box {
             padding: 3vh;
         }
     }
-    
 }
 
 @media only screen and (max-width: 425px) {
-
-    .introductionContainer__copy{
+    .introductionContainer__copy {
         padding: 10vh;
-        & h1{
+        & h1 {
             padding-top: 3vh;
         }
-        & p{
-                font-size: 3vh;
-                padding-top: 3vh;
+        & p {
+            font-size: 3vh;
+            padding-top: 3vh;
         }
     }
-    
 }
