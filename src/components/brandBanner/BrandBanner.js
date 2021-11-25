@@ -13,7 +13,7 @@ const BrandBanner = () => {
     return ( 
 
         <section className="brandBannerContainer" >
-            <ul data-aos="fade" >
+            <ul data-aos="flip-up" >
                 <li >
                     <img src="https://www.svgrepo.com/show/303164/facebook-logo.svg" alt="facebookLogo"/>
                 </li>

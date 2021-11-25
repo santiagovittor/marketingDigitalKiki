@@ -26,7 +26,7 @@ const ContactForm = () => {
 
     return ( 
 
-        <div className="contactContainer__form" data-aos="fade-down">
+        <div className="contactContainer__form" data-aos="fade-in">
             <div className="contactContainer__form--img">
 
             </div>

@@ -9,6 +9,11 @@ const EcommercePage = () => {
         <header>
             <NavBar/>
         </header>
+        <section className="diseñoWebContainer">
+            <h1>
+                E COMMERCE
+            </h1>
+        </section>
         <Footer/>
         </>
 

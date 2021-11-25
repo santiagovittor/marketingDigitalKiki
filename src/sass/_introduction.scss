@@ -38,13 +38,14 @@ $mainPurple: #612851;
         color: $mainPurple;
         display: grid;
         padding: 0 6rem 4rem 6rem;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
+        justify-content: space-around;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+        grid-gap: 3rem;
         & h1{
             font-size: 2rem;
         }
         & p{
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
         &--box {
             display: grid;

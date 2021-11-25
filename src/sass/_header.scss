@@ -9,6 +9,7 @@ header {
     background: url(https://images.freeimages.com/images/large-previews/b9b/ocean-1142861.jpg) center fixed;
     background-size: cover;
     font-family: "Laila", sans-serif;
+    width: 100%;
     & h2 {
         color: $mainPurple;
         font-size: 2.5rem;
@@ -34,10 +35,10 @@ header {
     background-color: transparent;
     padding: 1rem 1rem 0 1rem;
     z-index: 1;
+    width: 100%;
     position: fixed;
     justify-content: space-between;
     flex-flow: row wrap;
-    width: 100%;
     color: $mainPurple;
     max-height: fit-content;
     transition: 1s;
@@ -48,13 +49,13 @@ header {
     &__onScroll {
         grid-area: navBar;
         display: flex;
+        width: 100%;
         background-color: white;
         padding: 1rem 1rem 0 1rem;
         position: fixed;
         z-index: 1;
         justify-content: space-between;
         flex-flow: row wrap;
-        width: 100%;
         color: $mainPurple;
         max-height: fit-content;
         box-shadow: $fancyBoxShadow;
@@ -228,5 +229,6 @@ header {
     }
     .navBarItems {
         flex-flow: column wrap;
+        font-size: 1rem;
     }
 }

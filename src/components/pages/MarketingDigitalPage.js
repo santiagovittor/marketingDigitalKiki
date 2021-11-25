@@ -8,6 +8,11 @@ const MarketingDigitalPage = () => {
         <header>
             <NavBar/>
         </header>
+        <section className="diseñoWebContainer">
+            <h1>
+                MARKETING DIGITAL
+            </h1>
+        </section>
         <Footer/>
         </>
 

@@ -8,6 +8,11 @@ const DiseñoWebPage = () => {
         <header>
             <NavBar/>
         </header>
+        <section className="diseñoWebContainer">
+            <h1>
+                DISEÑO WEB
+            </h1>
+        </section>
         <Footer/>
         </>
 

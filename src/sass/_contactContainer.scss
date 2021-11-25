@@ -23,7 +23,7 @@ $mainPurple:#612851;
         width: 100%;
         height: fit-content;
         &--img{
-            background: url(https://images.freeimages.com/images/large-previews/c03/black-and-white-cat-1142706.jpg) center;
+            background: url(https://images.freeimages.com/images/large-previews/316/offices-1233432.jpg) center;
             background-size: cover;
             border-radius: 1vh 0 0 1vh;
             width: 100%;
@@ -84,8 +84,9 @@ $mainPurple:#612851;
         background-color: $mainPurple;
         color: white;
         border-radius: 1vh;
-        height: 8vh;
-        width: 16vh;
+        height: 3rem;
+        width: 100%;
+        font-size: 1.25rem;
         cursor: pointer;
         box-shadow: $fancyBoxShadow;
         &:hover{
@@ -93,13 +94,14 @@ $mainPurple:#612851;
             transition: .5s;
         }
         &--disabled{
-            border: none;
+        border: none;
         font-family: 'Laila', sans-serif;
         background-color: $mainPurple;
         color: white;
         border-radius: 1vh;
-        height: 8vh;
-        width: 16vh;
+        font-size: 1.25rem;
+        height: 3rem;
+        width: 100%;
         box-shadow: $fancyBoxShadow;
         opacity: .5;
         transition: .5s;
@@ -151,7 +153,6 @@ $mainPurple:#612851;
 
 
     .contactContainer{
-        border-radius: 1vh;
     &__form{
         display: grid;
         border-radius: 1vh;
@@ -173,6 +174,15 @@ $mainPurple:#612851;
         }
     }                             
     }
+    }
+
+    .inputContainer{
+        button{
+            margin-top: 1rem;
+            font-size: 1rem;
+            width: 100%;
+            box-shadow: $fancyBoxShadow;
+        }
     }
 }
 

@@ -1,0 +1,15 @@
+$fancyBoxShadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);   
+$mainPurple:#612851;
+
+
+.diseñoWebContainer{
+    display: grid;
+    place-content: center;
+    height: 40rem;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Laila', sans-serif;
+    background-color: rgb(17, 17, 17);
+    box-shadow: $fancyBoxShadow;
+}
