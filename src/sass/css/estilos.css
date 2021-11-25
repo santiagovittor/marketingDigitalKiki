@@ -66,8 +66,6 @@ header {
   background: url(https://images.freeimages.com/images/large-previews/b9b/ocean-1142861.jpg) center fixed;
   background-size: cover;
   font-family: "Laila", sans-serif;
-  height: fit-content;
-  width: 100%;
 }
 
 header h2 {
@@ -204,7 +202,7 @@ header p {
 
 @media only screen and (max-width: 1024px) {
   .navBarItems {
-    font-size: 2vh;
+    font-size: 1rem;
   }
 }
 
@@ -280,7 +278,6 @@ header p {
 .introductionContainer {
   grid-area: intro;
   background-color: #ffffff;
-  height: fit-content;
   display: grid;
   grid-template-areas: "textCopy" "boxes";
   justify-content: center;
@@ -291,19 +288,16 @@ header p {
 
 .introductionContainer__copy {
   display: grid;
-  height: 100%;
   grid-area: textCopy;
-  padding: 10% 25% 5% 25%;
+  padding: 4rem 5rem 1rem 5rem;
 }
 
 .introductionContainer__copy h1 {
-  font-size: 5vh;
-  margin-left: 15%;
-  margin-right: 15%;
+  font-size: 3rem;
 }
 
 .introductionContainer__copy h3 {
-  font-size: 2vh;
+  font-size: 1.25rem;
   letter-spacing: 0.1vh;
   margin-left: 20%;
   margin-right: 20%;
@@ -311,29 +305,31 @@ header p {
 }
 
 .introductionContainer__copy p {
-  padding-top: 3.5vh;
-  font-size: 3.5vh;
+  padding-top: 1.25rem;
+  font-size: 1.5rem;
   color: grey;
 }
 
 .introductionContainer__boxesContainer {
   grid-area: boxes;
-  height: 100%;
   color: #612851;
   display: grid;
-  padding: 0 10% 10% 10%;
+  padding: 0 6rem 4rem 6rem;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 10vh;
-  justify-content: center;
-  font-size: 2vh;
+  grid-gap: 2rem;
+}
+
+.introductionContainer__boxesContainer h1 {
+  font-size: 2rem;
+}
+
+.introductionContainer__boxesContainer p {
+  font-size: 1.5rem;
 }
 
 .introductionContainer__boxesContainer--box {
   display: grid;
   grid-template-areas: "img" "titulo" "texto";
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 
 .introductionContainer__boxesContainer--box p {
@@ -343,19 +339,20 @@ header p {
 
 .introductionContainer__boxesContainer--box img {
   grid-area: img;
-  margin-right: auto;
   margin-left: auto;
-  width: 100%;
-  height: 100%;
+  margin-right: auto;
+  width: 15rem;
+  height: 15rem;
 }
 
 @media only screen and (max-width: 768px) {
   .introductionContainer__boxesContainer {
     grid-template-columns: 1fr;
-    gap: 3vh;
+    gap: 1rem;
   }
-  .introductionContainer__boxesContainer--box {
-    padding: 3vh;
+  .introductionContainer__boxesContainer--box img {
+    width: 10rem;
+    height: 10rem;
   }
 }
 
@@ -364,11 +361,21 @@ header p {
     padding: 10vh;
   }
   .introductionContainer__copy h1 {
+    font-size: 2rem;
     padding-top: 3vh;
   }
+  .introductionContainer__copy h3 {
+    font-size: 1rem;
+  }
   .introductionContainer__copy p {
-    font-size: 3vh;
-    padding-top: 3vh;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+  .introductionContainer__boxesContainer--box h2 {
+    font-size: 1.5rem;
+  }
+  .introductionContainer__boxesContainer--box p {
+    font-size: 1rem;
   }
 }
 
@@ -413,6 +420,18 @@ header p {
 .spiritContainer__box p {
   font-family: 'Laila', sans-serif;
   padding-top: 3vh;
+}
+
+@media only screen and (min-width: 2300px) {
+  .spiritContainer__box h1 {
+    font-size: 4rem;
+  }
+  .spiritContainer__box h3 {
+    font-size: 2.5rem;
+  }
+  .spiritContainer__box p {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -504,13 +523,11 @@ header p {
 }
 
 @media only screen and (min-width: 1300px) {
-  #whatsappButton {
-    font-size: 2.5rem;
-  }
-}
-
-@media only screen and (min-width: 1300px) {
   #whatsappButtonContainer {
+    font-size: 1.5rem;
+  }
+  #whatsappButton {
+    padding: 1rem;
     font-size: 1.5rem;
   }
 }
@@ -693,6 +710,27 @@ header p {
   background-color: #20B038;
   border: solid 2px #0b9121;
   color: white;
+}
+
+@media only screen and (min-width: 1800px) {
+  .contactContainer h1 {
+    font-size: 4rem;
+  }
+  .contactContainer p {
+    font-size: 2rem;
+  }
+  .contactContainer__form--text {
+    height: 75%;
+  }
+  .inputContainer {
+    font-size: 2.5rem;
+  }
+  .inputContainer input {
+    font-size: 2rem;
+  }
+  .inputContainer button {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {

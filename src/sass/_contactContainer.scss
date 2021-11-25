@@ -120,6 +120,33 @@ $mainPurple:#612851;
     }
 
 
+@media only screen and (min-width: 1800px) {
+
+    .contactContainer{ 
+        & h1{
+            font-size: 4rem;
+        }
+        & p{
+            font-size: 2rem;
+        }
+        &__form--text{
+            height: 75%;
+        }
+    }
+
+    .inputContainer{
+        font-size: 2.5rem;
+        & input{
+            font-size: 2rem;
+        }
+        & button{
+            font-size: 2rem;
+        }
+    }
+
+    }
+
+
 @media only screen and (max-width: 768px) {
 
 

@@ -33,22 +33,17 @@ $fancyBoxShadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
     justify-content: center;
 }
 
-
-@media only screen and (min-width: 1300px) {
-
-    #whatsappButton{
-        font-size: 2.5rem;
-    }
-
-
-
-}
-
 @media only screen and (min-width: 1300px) {
 
     #whatsappButtonContainer{
         font-size: 1.5rem;
     }
+
+    #whatsappButton{
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
 
 }
 

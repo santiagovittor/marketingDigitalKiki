@@ -5,7 +5,6 @@ $mainPurple: #612851;
 .introductionContainer {
     grid-area: intro;
     background-color: #ffffff;
-    height: fit-content;
     display: grid;
     grid-template-areas:
         "textCopy"
@@ -16,56 +15,53 @@ $mainPurple: #612851;
     text-align: center;
     &__copy {
         display: grid;
-        height: 100%;
         grid-area: textCopy;
-        padding: 10% 25% 5% 25%;
+        padding: 4rem 5rem 1rem 5rem;
         & h1 {
-            font-size: 5vh;
-            margin-left: 15%;
-            margin-right: 15%;
+            font-size: 3rem;
         }
         & h3 {
-            font-size: 2vh;
+            font-size: 1.25rem;
             letter-spacing: 0.1vh;
             margin-left: 20%;
             margin-right: 20%;
             color: $mainPurple;
         }
         & p {
-            padding-top: 3.5vh;
-            font-size: 3.5vh;
+            padding-top: 1.25rem;
+            font-size: 1.5rem;
             color: grey;
         }
     }
     &__boxesContainer {
         grid-area: boxes;
-        height: 100%;
         color: $mainPurple;
         display: grid;
-        padding: 0 10% 10% 10%;
+        padding: 0 6rem 4rem 6rem;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 10vh;
-        justify-content: center;
-        font-size: 2vh;
+        grid-gap: 2rem;
+        & h1{
+            font-size: 2rem;
+        }
+        & p{
+            font-size: 1.5rem;
+        }
         &--box {
             display: grid;
             grid-template-areas:
                 "img"
                 "titulo"
                 "texto";
-            justify-content: center;
-            align-items: center;
-            width: 100%;
             & p {
                 grid-area: texto;
                 color: grey;
             }
             & img {
                 grid-area: img;
-                margin-right: auto;
                 margin-left: auto;
-                width: 100%;
-                height: 100%;
+                margin-right: auto;
+                width: 15rem;
+                height: 15rem;
             }
         }
     }
@@ -74,9 +70,10 @@ $mainPurple: #612851;
 @media only screen and (max-width: 768px) {
     .introductionContainer__boxesContainer {
         grid-template-columns: 1fr ;
-        gap: 3vh;
-        &--box {
-            padding: 3vh;
+        gap: 1rem;
+        &--box img {
+            width: 10rem;
+                height: 10rem;
         }
     }
 }
@@ -85,11 +82,23 @@ $mainPurple: #612851;
     .introductionContainer__copy {
         padding: 10vh;
         & h1 {
+            font-size: 2rem;
             padding-top: 3vh;
         }
+        & h3{
+            font-size: 1rem;
+        }
         & p {
-            font-size: 3vh;
-            padding-top: 3vh;
+            font-size: 1rem;
+            padding-top: 1.5rem;
+        }
+    }
+    .introductionContainer__boxesContainer--box{
+        & h2{
+            font-size: 1.5rem;
+        }
+        & p{
+            font-size: 1rem;
         }
     }
 }
