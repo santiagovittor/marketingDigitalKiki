@@ -33,15 +33,13 @@ $mainPurple:#612851;
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
 
     #goTopArrow{
-        bottom: 60px;
-        right: 20px;
-
-    
+        bottom: 10vh;
+        right: 5vh;
 
     }
 
-
 }
+

@@ -5,16 +5,16 @@ import logoKiki from "../../assets/pngs/logoKikiTransparent.png"
 const Footer = () => {
     return (
 
-        <>
-            <div className="footerContainer">
-                <div className="footerContainer__column--brand">
+        <footer className="footerContainer">
+            <div className="footerItems">
+                <div className="footerItems__column--brand">
                     <Link id="navBarLogo" to="/main">
                         <img src={logoKiki} alt="logoKiki" />
                     </Link>
 
-                    <p> Ofrecemos un servicio integral para optimizar tu servicio o negocio en forma online.</p>
+                    <p> Ofrecemos un servicio integral para optimizar tu negocio en forma online.</p>
                 </div>
-                <div className="footerContainer__column">
+                <div className="footerItems__column">
                     <h3>Recursos</h3>
                     <ul>
                         <li> 1 </li>
@@ -23,7 +23,7 @@ const Footer = () => {
                         <li> 4 </li>
                     </ul>
                 </div>
-                <div className="footerContainer__column">
+                <div className="footerItems__column">
                     <h3>Nosotros</h3>
                     <ul>
                         <li> 1 </li>
@@ -32,7 +32,7 @@ const Footer = () => {
                         <li> 4 </li>
                     </ul>
                 </div>
-                <div className="footerContainer__column">
+                <div className="footerItems__column">
                     <h3>Contacto</h3>
                     <ul>
                         <li> <a href="mailto:svittordev@gmail.com">svittordev@gmail.com</a> </li>
@@ -40,10 +40,10 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="footerContainer__footer">
+            <div className="footerItems__footer">
                 <p>Hecho con ❤️ por KikiDigital™  </p>
             </div>
-        </>
+        </footer>
 
     );
 }

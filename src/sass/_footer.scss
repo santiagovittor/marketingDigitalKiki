@@ -3,6 +3,11 @@ $mainPurple:#612851;
 
 
 .footerContainer{
+    display: grid;
+    grid-area: footer;
+}
+
+.footerItems{
     display: flex;
     flex-flow: wrap row;
     justify-content: space-around;
@@ -25,6 +30,8 @@ $mainPurple:#612851;
             line-height: 1.5rem;
         }
         & h3{
+            display: grid;
+            place-content: center;
             padding-bottom: 3vh;
         }
         & ul li{
@@ -51,12 +58,16 @@ $mainPurple:#612851;
 }
 
 @media only screen and (max-width: 768px) {
-    .footerContainer{
+    .footerItems{
         display: flex;
         place-content: center;
         flex-flow: wrap column;
         &__column--brand{
             width: 100%;
+            & a{
+                place-content: center;
+                padding-bottom: 3vh;
+            }
         }
     }
 }

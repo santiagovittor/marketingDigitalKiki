@@ -1,38 +1,36 @@
-$mainRojo:#E1261A;
+$mainRojo: #e1261a;
 $mainPurple: #612851;
-$mainRojoFocus:#f82b1c;
-$fancyBoxShadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);   
+$mainRojoFocus: #f82b1c;
+$fancyBoxShadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
 
-header{
+header {
     display: grid;
     grid-area: topArea;
     background: url(https://images.freeimages.com/images/large-previews/b9b/ocean-1142861.jpg) center fixed;
     background-size: cover;
-    font-family: 'Laila', sans-serif;
+    font-family: "Laila", sans-serif;
     height: fit-content;
     width: 100%;
-    height: fit-content;
-    & h2{
+    & h2 {
         color: $mainPurple;
-        font-size: 5vh;
+        font-size: 2.5rem;
         font-weight: 900;
-        padding-bottom: 2vh;
+        padding: 3rem 0 3rem 0;
     }
-    & p{
-        font-size: 3vh;
-        font-weight: 500 ;
+    & p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding-bottom: 6rem;
     }
 }
 
-
-
-.headerCopy{
-    padding: 15% 0 0 1%;
+.headerCopy {
+    padding: 8rem 0 0 1rem;
     width: 50%;
-    margin-bottom: 30vh;
-    }
+    margin-bottom: 5rem;
+}
 
-.navBar{
+.navBar {
     grid-area: navBar;
     display: flex;
     background-color: transparent;
@@ -45,12 +43,11 @@ header{
     color: $mainPurple;
     max-height: fit-content;
     transition: 1s;
-    &:hover{
+    &:hover {
         box-shadow: $fancyBoxShadow;
         background-color: white;
-
     }
-    &__onScroll{
+    &__onScroll {
         grid-area: navBar;
         display: flex;
         background-color: white;
@@ -67,128 +64,171 @@ header{
     }
 }
 
-.navBarItems{
+.navBarItems {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    font-size: 3vh;
+    font-size: 1rem;
 }
 
-.navLinks{
+.navLinks {
     padding: 1vh 3vh 0 3vh;
     position: relative;
     display: inline-block;
-    & a{
+    & a {
         color: $mainPurple;
         cursor: pointer;
         &:after {
-            content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 3px;
-        transform: scaleX(0);
-        background-color: $mainPurple;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            transform: scaleX(0);
+            background-color: $mainPurple;
 
-        transition: transform 0.3s;
+            transition: transform 0.3s;
         }
         &:hover {
             &:after {
-                transform: scaleX(1);    
+                transform: scaleX(1);
             }
         }
-        &.active:after{
-            transform: scaleX(1);    
+        &.active:after {
+            transform: scaleX(1);
         }
     }
-    
 }
 
-
-#navBarLogo{
+#navBarLogo {
     font-size: 6vh;
 }
 
-#navBarToggleButton{
+#navBarToggleButton {
     color: $mainPurple;
     display: flex;
     order: 3;
     align-items: center;
     background-color: transparent;
     border: transparent;
-    
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 2200px) {
+    
+    header {
+        min-height: 100rem;
+        h2 {
+            font-size: 5rem;
+            font-weight: 900;
+            padding: 5rem 0 2rem 0;
+        }
+        & p {
+            font-size: 2.5rem;
+            font-weight: 500;
+            padding-bottom: 5rem;
+        }
+    }
 
-    .navBarItems{
-        font-size: 2vh;
+    .headerCopy {
+        padding: 20rem 0 0 4rem;
+        width: 50%;
+        margin-bottom: 5rem;
+    }
+
+    .navBarItems {
+        font-size: 2rem;
     }
 
 }
 
 
+@media only screen and (max-width: 1024px) {
+    .navBarItems {
+        font-size: 2vh;
+    }
+}
+
 @media only screen and (max-width: 768px) {
 
-    
-    .navBar{
+    header {
+        h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            padding: 2rem 0 2rem 0;
+        }
+        & p {
+            font-size: 1rem;
+            font-weight: 500;
+            padding-bottom: 4rem;
+        }
+    }
+
+    .navBar {
         padding: 0;
         display: grid;
         grid-template-areas: "logo items items boton";
-        &__onScroll{
+        &__onScroll {
             padding: 0;
             display: grid;
             grid-template-areas: "logo items items boton";
         }
     }
-    .navBarItems{
+    .navBarItems {
         flex-flow: row wrap;
         grid-area: items;
         margin: 0;
         font-size: 2vh;
     }
-    #navBarLogo{
+    #navBarLogo {
         display: grid;
         grid-area: logo;
     }
-    #navBarToggleButton{
+    #navBarToggleButton {
         display: grid;
         grid-area: boton;
     }
-
-
-
 }
 
 @media only screen and (max-width: 425px) {
+    header {
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            padding: 1.5rem 0 1.5rem 0;
+        }
+        & p {
+            font-size: 1rem;
+            font-weight: 500;
+            padding-bottom: 3rem;
+        }
+    }
 
-    
-    .headerCopy{
+    .headerCopy {
         padding-top: 30%;
     }
 
-    #navBarToggleButton{
+    #navBarToggleButton {
         align-items: center;
     }
-    .navBar{
+    .navBar {
         display: grid;
         width: 100vw;
-        grid-template-areas: "logo boton"
-                                "items items";
+        grid-template-areas:
+            "logo boton"
+            "items items";
 
-                                
-      &__onScroll{
-        display: grid;
-        width: 100vw;
-        grid-template-areas: "logo boton"
-                                "items items";
-      }                          
+        &__onScroll {
+            display: grid;
+            width: 100vw;
+            grid-template-areas:
+                "logo boton"
+                "items items";
+        }
     }
-    .navBarItems{
+    .navBarItems {
         flex-flow: column wrap;
     }
-
 }

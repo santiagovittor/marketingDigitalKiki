@@ -43,10 +43,9 @@ $mainPurple: #612851;
         color: $mainPurple;
         display: grid;
         padding: 0 10% 10% 10%;
-        grid-template-columns: repeat(3, minmax(100px, 200px));
-        grid-gap: 20%;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10vh;
         justify-content: center;
-        align-items: flex-start;
         font-size: 2vh;
         &--box {
             display: grid;
@@ -74,8 +73,8 @@ $mainPurple: #612851;
 
 @media only screen and (max-width: 768px) {
     .introductionContainer__boxesContainer {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr ;
+        gap: 3vh;
         &--box {
             padding: 3vh;
         }

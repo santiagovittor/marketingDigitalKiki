@@ -65,28 +65,28 @@ header {
   grid-area: topArea;
   background: url(https://images.freeimages.com/images/large-previews/b9b/ocean-1142861.jpg) center fixed;
   background-size: cover;
-  font-family: 'Laila', sans-serif;
+  font-family: "Laila", sans-serif;
   height: fit-content;
   width: 100%;
-  height: fit-content;
 }
 
 header h2 {
   color: #612851;
-  font-size: 5vh;
+  font-size: 2.5rem;
   font-weight: 900;
-  padding-bottom: 2vh;
+  padding: 3rem 0 3rem 0;
 }
 
 header p {
-  font-size: 3vh;
+  font-size: 1.5rem;
   font-weight: 500;
+  padding-bottom: 6rem;
 }
 
 .headerCopy {
-  padding: 15% 0 0 1%;
+  padding: 8rem 0 0 1rem;
   width: 50%;
-  margin-bottom: 30vh;
+  margin-bottom: 5rem;
 }
 
 .navBar {
@@ -130,7 +130,7 @@ header p {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  font-size: 3vh;
+  font-size: 1rem;
 }
 
 .navLinks {
@@ -145,7 +145,7 @@ header p {
 }
 
 .navLinks a:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -178,6 +178,30 @@ header p {
   border: transparent;
 }
 
+@media only screen and (min-width: 2200px) {
+  header {
+    min-height: 100rem;
+  }
+  header h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    padding: 5rem 0 2rem 0;
+  }
+  header p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-bottom: 5rem;
+  }
+  .headerCopy {
+    padding: 20rem 0 0 4rem;
+    width: 50%;
+    margin-bottom: 5rem;
+  }
+  .navBarItems {
+    font-size: 2rem;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .navBarItems {
     font-size: 2vh;
@@ -185,6 +209,16 @@ header p {
 }
 
 @media only screen and (max-width: 768px) {
+  header h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 2rem 0 2rem 0;
+  }
+  header p {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 4rem;
+  }
   .navBar {
     padding: 0;
     display: grid;
@@ -212,6 +246,16 @@ header p {
 }
 
 @media only screen and (max-width: 425px) {
+  header h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 1.5rem 0 1.5rem 0;
+  }
+  header p {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 3rem;
+  }
   .headerCopy {
     padding-top: 30%;
   }
@@ -278,10 +322,9 @@ header p {
   color: #612851;
   display: grid;
   padding: 0 10% 10% 10%;
-  grid-template-columns: repeat(3, minmax(100px, 200px));
-  grid-gap: 20%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10vh;
   justify-content: center;
-  align-items: flex-start;
   font-size: 2vh;
 }
 
@@ -308,8 +351,8 @@ header p {
 
 @media only screen and (max-width: 768px) {
   .introductionContainer__boxesContainer {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 3vh;
   }
   .introductionContainer__boxesContainer--box {
     padding: 3vh;
@@ -382,6 +425,9 @@ header p {
   .spiritContainer__box {
     padding: 5vh;
   }
+  .spiritContainer__box h3, .spiritContainer__box p {
+    text-align: start;
+  }
 }
 
 .brandBannerContainer {
@@ -429,7 +475,7 @@ header p {
   justify-content: center;
   position: fixed;
   height: 7vh;
-  width: 40vh;
+  width: fit-content;
   z-index: 2;
   bottom: 40px;
   right: 40px;
@@ -455,6 +501,18 @@ header p {
   cursor: pointer;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (min-width: 1300px) {
+  #whatsappButton {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  #whatsappButtonContainer {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -502,10 +560,10 @@ header p {
   transition: .5s;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
   #goTopArrow {
-    bottom: 60px;
-    right: 20px;
+    bottom: 10vh;
+    right: 5vh;
   }
 }
 
@@ -662,6 +720,11 @@ header p {
 }
 
 .footerContainer {
+  display: grid;
+  grid-area: footer;
+}
+
+.footerItems {
   display: flex;
   flex-flow: wrap row;
   justify-content: space-around;
@@ -673,7 +736,7 @@ header p {
   border: none;
 }
 
-.footerContainer__column {
+.footerItems__column {
   height: 100%;
   margin: 4vh;
   display: grid;
@@ -682,32 +745,34 @@ header p {
   font-family: 'Laila', sans-serif;
 }
 
-.footerContainer__column--brand {
+.footerItems__column--brand {
   width: 25%;
   font-family: 'Laila', sans-serif;
   line-height: 1.5rem;
 }
 
-.footerContainer__column h3 {
+.footerItems__column h3 {
+  display: grid;
+  place-content: center;
   padding-bottom: 3vh;
 }
 
-.footerContainer__column ul li {
+.footerItems__column ul li {
   display: grid;
   place-content: center;
   padding: 1vh;
 }
 
-.footerContainer__column a {
+.footerItems__column a {
   color: black;
 }
 
-.footerContainer__column a:hover {
+.footerItems__column a:hover {
   color: #612851;
   transition: .5s;
 }
 
-.footerContainer__footer {
+.footerItems__footer {
   display: grid;
   font-family: 'Laila', sans-serif;
   place-content: center;
@@ -717,13 +782,17 @@ header p {
 }
 
 @media only screen and (max-width: 768px) {
-  .footerContainer {
+  .footerItems {
     display: flex;
     place-content: center;
     flex-flow: wrap column;
   }
-  .footerContainer__column--brand {
+  .footerItems__column--brand {
     width: 100%;
+  }
+  .footerItems__column--brand a {
+    place-content: center;
+    padding-bottom: 3vh;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

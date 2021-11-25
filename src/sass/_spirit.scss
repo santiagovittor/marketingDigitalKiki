@@ -52,6 +52,9 @@ $mainPurple:#612851;
 
     .spiritContainer__box{
         padding: 5vh;
+        & h3,p{
+            text-align: start;
+        }
     }
     
 }
