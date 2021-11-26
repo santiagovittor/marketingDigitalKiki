@@ -33,7 +33,7 @@ const ContactForm = () => {
             <div className="contactContainer__form--text">
                 <div>
                 <h1>Nos encantaría conocer tu negocio</h1>
-                <p>Enviamos un mensaje por medio de nuestro formulario de contacto o comunicate al 1162300345</p>
+                <p>Envianos un mensaje por medio de nuestro formulario de contacto o comunicate al 1162300345</p>
                 <p>Te invitamos a tener una reunión para poder conocer más en detalle tu negocio o proyecto.</p>
                 </div>
                 <div className="inputContainer">

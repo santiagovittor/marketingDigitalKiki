@@ -1,4 +1,3 @@
-import { useState,useEffect } from "react";
 import BrandBanner from "../brandBanner/BrandBanner";
 import ContactContainer from "../contact/ContactContainer";
 import GoTopArrow from "../goTopArrow/GoTopArrow";
@@ -12,25 +11,7 @@ import Footer from "../footer/Footer";
 
 const MainPage = () => {
 
-    const [scrolling, setScrolling] = useState(false);
-    const [scrollTop, setScrollTop] = useState(0);
-
-    useEffect(() => {
-        function onScroll() {
-          let currentPosition = window.pageYOffset;
-          if (currentPosition > 300) {
-            setScrolling(true);
-          }
-          else{
-              setScrolling(false)
-          } 
-        
-          setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
-        }
     
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-      }, [scrollTop]);
 
     return ( 
         <>
@@ -40,7 +21,7 @@ const MainPage = () => {
         <Spirit/>
         <BrandBanner/>
         <ContactContainer/>
-        {scrolling? <GoTopArrow/> : <></>}
+        <GoTopArrow/>
         <WhatsappButton/>
         <Footer/>
         </div>

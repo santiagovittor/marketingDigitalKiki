@@ -11,24 +11,28 @@ const NavBarItems = () => {
         AOS.init({duration: 1500})
     },[]);
 
+    const goTop = () =>{   
+            window.scrollTo(0, 0)
+    }
+
 
     return ( 
         <>
         <div className="navBarItems" data-aos="fade">
             <div className="navLinks">
-            <NavLink to="/main" >Inicio</NavLink>
+            <NavLink to="/main" onClick={goTop} >Inicio</NavLink>
             </div>
             <div className="navLinks">
-            <NavLink to="/marketing-digital">Marketing Digital</NavLink>
+            <NavLink to="/marketing-digital" onClick={goTop}>Marketing Digital</NavLink>
             </div>
             <div className="navLinks">
-            <NavLink to="/diseño-web">Diseño Web</NavLink>
+            <NavLink to="/diseño-web" onClick={goTop}>Diseño Web</NavLink>
             </div>
             <div className="navLinks">
-            <NavLink to="/e-commerce">E-Commerce</NavLink>
+            <NavLink to="/e-commerce" onClick={goTop}>E-Commerce</NavLink>
             </div>
             <div className="navLinks">
-            <NavLink to="/contacto">Contacto</NavLink>
+            <NavLink to="/contacto" onClick={goTop}>Contacto</NavLink>
             </div>
         </div>
         </>

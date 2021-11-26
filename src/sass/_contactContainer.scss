@@ -1,188 +1,188 @@
-$fancyBoxShadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);   
-$mainPurple:#612851;
+    $fancyBoxShadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+    $mainPurple: #612851;
 
-
-.contactContainer{
-    display: grid;
-    grid-area: contacto;
-    place-content: center;
-    height: fit-content;
-    padding: 10vh;
-    width: 100vw;
-    background-color: rgb(38, 38, 38);
-    border: none;
-    &__form{
+    .contactContainer {
         display: grid;
+        grid-area: contacto;
         place-content: center;
-        grid-template-columns: 1fr 1fr;
-        border-radius: 1vh 0 0 1vh;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: $fancyBoxShadow;
-        background-color: white;
-        width: 100%;
         height: fit-content;
-        &--img{
-            background: url(https://images.freeimages.com/images/large-previews/316/offices-1233432.jpg) center;
-            background-size: cover;
-            border-radius: 1vh 0 0 1vh;
-            width: 100%;
-            min-height: 150vh;   
-        }
-        &--text{
+        padding: 10vh;
+        width: 100vw;
+        background-color: rgb(38, 38, 38);
+        border: none;
+        &__form {
             display: grid;
-            grid-template-rows: 1fr 1fr;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            align-items: center;
-            padding: 10vh;
-            & h1{
-                font-family: 'Laila', sans-serif;
-                color: $mainPurple;
-                text-transform: uppercase;
-                text-align: center;
-                padding-bottom: 6vh;
-                padding-top: 3vh;
-            }
-            & p{
-                font-family: 'Laila', sans-serif;
-                padding-bottom: 3vh;
-                color: gray;
-                text-align: left;
-            }
-        }
-    }
-}
-
-.inputContainer{
-    display: grid;
-    font-family: 'Laila', sans-serif;
-    font-weight: 500;
-    &__each{
-        display: flex;
-        flex-direction: column;
-        margin: 1rem 0 1rem 0;
-        & input{
-            font-family: 'Laila', sans-serif;
-            border:none;
-            border-bottom: .5vh solid rgb(158, 158, 158);
-            &:focus{
-                outline: none;
-                border-bottom: .5vh solid $mainPurple;
-                transition: .2s;
-            }
-        }
-        &--error{
-            color: red;
-            padding-bottom: 2vh;
-        }
-    }
-    &__button{
-        border: none;
-        font-family: 'Laila', sans-serif;
-        background-color: $mainPurple;
-        color: white;
-        border-radius: 1vh;
-        height: 3rem;
-        width: 100%;
-        font-size: 1.25rem;
-        cursor: pointer;
-        box-shadow: $fancyBoxShadow;
-        &:hover{
-            filter: saturate(2);
-            transition: .5s;
-        }
-        &--disabled{
-        border: none;
-        font-family: 'Laila', sans-serif;
-        background-color: $mainPurple;
-        color: white;
-        border-radius: 1vh;
-        font-size: 1.25rem;
-        height: 3rem;
-        width: 100%;
-        box-shadow: $fancyBoxShadow;
-        opacity: .5;
-        transition: .5s;
-        }
-        }
-
-    &__successAlert{
-        margin-top: 3vh;
-        padding: 3vh;
-        opacity: .9;
-        border-radius: 1vh;
-        box-shadow: $fancyBoxShadow;
-        background-color: #20B038;
-        border: solid 2px #0b9121;
-        color: white;
-        
-    }
-    }
-
-
-@media only screen and (min-width: 1800px) {
-
-    .contactContainer{ 
-        & h1{
-            font-size: 4rem;
-        }
-        & p{
-            font-size: 2rem;
-        }
-        &__form--text{
-            height: 75%;
-        }
-    }
-
-    .inputContainer{
-        font-size: 2.5rem;
-        & input{
-            font-size: 2rem;
-        }
-        & button{
-            font-size: 2rem;
-        }
-    }
-
-    }
-
-
-@media only screen and (max-width: 768px) {
-
-
-    .contactContainer{
-    &__form{
-        display: grid;
-        border-radius: 1vh;
-        grid-template-columns: 1fr;
-        grid-template-areas: "foto"
-                             "formulario"
-                             "formulario" ;
-
-    &--img{
-        width: 100%;
-        display: grid;
-        grid-area: foto;
-    }
-    &--text{
-        display: grid ;
-        grid-area: formulario;
-        & h1{
-            text-align: center;
-        }
-    }                             
-    }
-    }
-
-    .inputContainer{
-        button{
-            margin-top: 1rem;
-            font-size: 1rem;
-            width: 100%;
+            place-content: center;
+            grid-template-columns: 1fr 1fr;
+            margin-left: auto;
+            margin-right: auto;
             box-shadow: $fancyBoxShadow;
+            background-color: white;
+            width: 100%;
+            height: fit-content;
+            &--img {
+                background: url(https://images.freeimages.com/images/large-previews/316/offices-1233432.jpg) center;
+                background-size: cover;
+                width: 100%;
+                min-height: 150vh;
+            }
+            &--text {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                padding: 10vh;
+                & h1 {
+                    font-family: "Laila", sans-serif;
+                    color: $mainPurple;
+                    text-transform: uppercase;
+                    text-align: center;
+                    padding-bottom: 6vh;
+                    padding-top: 3vh;
+                }
+                & p {
+                    font-family: "Laila", sans-serif;
+                    padding-bottom: 3vh;
+                    color: gray;
+                    text-align: left;
+                }
+            }
         }
     }
-}
 
+    .inputContainer {
+        display: grid;
+        font-family: "Laila", sans-serif;
+        font-weight: 500;
+        &__each {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0 1rem 0;
+            & input {
+                font-family: "Laila", sans-serif;
+                border: none;
+                border-bottom: 0.5vh solid rgb(158, 158, 158);
+                &:focus {
+                    outline: none;
+                    border-bottom: 0.5vh solid $mainPurple;
+                    transition: 0.2s;
+                }
+            }
+            &--error {
+                color: red;
+                padding-bottom: 2vh;
+            }
+        }
+        &__button {
+            border: none;
+            font-family: "Laila", sans-serif;
+            background-color: $mainPurple;
+            color: white;
+            border-radius: 1vh;
+            height: 3rem;
+            width: 100%;
+            font-size: 1.25rem;
+            cursor: pointer;
+            box-shadow: $fancyBoxShadow;
+            &:hover {
+                filter: saturate(2);
+                transition: 0.5s;
+            }
+            &--disabled {
+                border: none;
+                font-family: "Laila", sans-serif;
+                background-color: $mainPurple;
+                color: white;
+                border-radius: 1vh;
+                font-size: 1.25rem;
+                height: 3rem;
+                width: 100%;
+                box-shadow: $fancyBoxShadow;
+                opacity: 0.5;
+                transition: 0.5s;
+            }
+        }
+
+        &__successAlert {
+            margin-top: 3vh;
+            padding: 3vh;
+            opacity: 0.9;
+            border-radius: 1vh;
+            box-shadow: $fancyBoxShadow;
+            background-color: #20b038;
+            border: solid 2px #0b9121;
+            color: white;
+        }
+    }
+
+    @media only screen and (min-width: 1800px) {
+        .contactContainer {
+            & h1 {
+                font-size: 4rem;
+            }
+            & p {
+                font-size: 2rem;
+            }
+            &__form--text {
+                height: 75%;
+            }
+        }
+
+        .inputContainer {
+            font-size: 2.5rem;
+            & input {
+                font-size: 2rem;
+            }
+            & button {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .contactContainer {
+            &__form {
+                display: grid;
+                border-radius: 1vh;
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "foto"
+                    "formulario"
+                    "formulario"
+                    "formulario";
+
+                &--img {
+                    display: none;
+                    grid-area: foto;
+                }
+                &--text {
+                    display: grid;
+                    padding-top: 6rem;
+                    background: url(https://images.freeimages.com/images/large-previews/316/offices-1233432.jpg) center;
+                    background-size: cover;
+                    grid-area: formulario;
+                    & h1 {
+                        display: none;
+                    }
+                    & p {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .inputContainer {
+            margin-top: -12rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 2rem;
+            border-radius: 1rem;
+            button {
+                margin-top: 1rem;
+                font-size: 1rem;
+                width: 100%;
+                box-shadow: $fancyBoxShadow;
+            }
+        }
+    }

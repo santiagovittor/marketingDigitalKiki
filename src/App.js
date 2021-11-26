@@ -18,7 +18,6 @@ const App = () => {
         <Route path="/diseño-web" component={DiseñoWebPage} exact />
         <Route path="/e-commerce" component={EcommercePage} exact />
         <Route path="/marketing-digital" component={MarketingDigitalPage} exact />
-
       </Switch>
     </BrowserRouter>
   )

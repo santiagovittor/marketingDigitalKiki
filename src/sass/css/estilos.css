@@ -30,8 +30,9 @@ ul {
   justify-content: center;
   place-content: center;
   width: 100%;
-  min-height: 100vh;
-  max-height: fit-content;
+  height: 100vh;
+  overflow-y: hidden;
+  max-height: 100%;
   filter: saturate(3) blur(1px);
   background: url(https://images.freeimages.com/images/large-previews/53d/daisies-2-1398443.jpg) center fixed;
   background-size: cover;
@@ -42,9 +43,9 @@ ul {
   color: #E1261A;
   border: transparent;
   background-color: transparent;
-  font-size: 15vh;
-  border-radius: 5vh;
-  padding: 0 5vh 0 5vh;
+  font-size: 6rem;
+  border-radius: 4rem;
+  padding: 0 2rem 0 2rem;
   cursor: pointer;
   font-family: 'Laila', sans-serif;
 }
@@ -273,6 +274,7 @@ header p {
   .navBarItems {
     flex-flow: column wrap;
     font-size: 1rem;
+    padding: 2rem;
   }
 }
 
@@ -603,7 +605,6 @@ header p {
   display: grid;
   place-content: center;
   grid-template-columns: 1fr 1fr;
-  border-radius: 1vh 0 0 1vh;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
@@ -615,7 +616,6 @@ header p {
 .contactContainer__form--img {
   background: url(https://images.freeimages.com/images/large-previews/316/offices-1233432.jpg) center;
   background-size: cover;
-  border-radius: 1vh 0 0 1vh;
   width: 100%;
   min-height: 150vh;
 }
@@ -631,7 +631,7 @@ header p {
 }
 
 .contactContainer__form--text h1 {
-  font-family: 'Laila', sans-serif;
+  font-family: "Laila", sans-serif;
   color: #612851;
   text-transform: uppercase;
   text-align: center;
@@ -640,7 +640,7 @@ header p {
 }
 
 .contactContainer__form--text p {
-  font-family: 'Laila', sans-serif;
+  font-family: "Laila", sans-serif;
   padding-bottom: 3vh;
   color: gray;
   text-align: left;
@@ -648,7 +648,7 @@ header p {
 
 .inputContainer {
   display: grid;
-  font-family: 'Laila', sans-serif;
+  font-family: "Laila", sans-serif;
   font-weight: 500;
 }
 
@@ -659,7 +659,7 @@ header p {
 }
 
 .inputContainer__each input {
-  font-family: 'Laila', sans-serif;
+  font-family: "Laila", sans-serif;
   border: none;
   border-bottom: 0.5vh solid #9e9e9e;
 }
@@ -667,7 +667,7 @@ header p {
 .inputContainer__each input:focus {
   outline: none;
   border-bottom: 0.5vh solid #612851;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .inputContainer__each--error {
@@ -677,7 +677,7 @@ header p {
 
 .inputContainer__button {
   border: none;
-  font-family: 'Laila', sans-serif;
+  font-family: "Laila", sans-serif;
   background-color: #612851;
   color: white;
   border-radius: 1vh;
@@ -690,12 +690,12 @@ header p {
 
 .inputContainer__button:hover {
   filter: saturate(2);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .inputContainer__button--disabled {
   border: none;
-  font-family: 'Laila', sans-serif;
+  font-family: "Laila", sans-serif;
   background-color: #612851;
   color: white;
   border-radius: 1vh;
@@ -703,17 +703,17 @@ header p {
   height: 3rem;
   width: 100%;
   box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
-  opacity: .5;
-  transition: .5s;
+  opacity: 0.5;
+  transition: 0.5s;
 }
 
 .inputContainer__successAlert {
   margin-top: 3vh;
   padding: 3vh;
-  opacity: .9;
+  opacity: 0.9;
   border-radius: 1vh;
   box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
-  background-color: #20B038;
+  background-color: #20b038;
   border: solid 2px #0b9121;
   color: white;
 }
@@ -744,19 +744,30 @@ header p {
     display: grid;
     border-radius: 1vh;
     grid-template-columns: 1fr;
-    grid-template-areas: "foto" "formulario" "formulario";
+    grid-template-areas: "foto" "formulario" "formulario" "formulario";
   }
   .contactContainer__form--img {
-    width: 100%;
-    display: grid;
+    display: none;
     grid-area: foto;
   }
   .contactContainer__form--text {
     display: grid;
+    padding-top: 6rem;
+    background: url(https://images.freeimages.com/images/large-previews/316/offices-1233432.jpg) center;
+    background-size: cover;
     grid-area: formulario;
   }
   .contactContainer__form--text h1 {
-    text-align: center;
+    display: none;
+  }
+  .contactContainer__form--text p {
+    display: none;
+  }
+  .inputContainer {
+    margin-top: -12rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 1rem;
   }
   .inputContainer button {
     margin-top: 1rem;
