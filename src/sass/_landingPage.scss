@@ -2,13 +2,13 @@ $mainRojo:#E1261A;
 
 #landingPage{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    place-content: center;
+    gap: 4rem;
     width: 100%;
     height: 100vh;
     overflow-y: hidden;
-    max-height: 100%;
     filter: saturate(3) blur(1px);
     background: url(https://images.freeimages.com/images/large-previews/53d/daisies-2-1398443.jpg) center fixed;
     background-size: cover;
@@ -17,11 +17,11 @@ $mainRojo:#E1261A;
 .button__landing{
     display: grid;
     color: $mainRojo;
+    place-content: center;
     border: transparent;
     background-color: transparent;
-    font-size: 6rem;
+    font-size: 2rem;
     border-radius: 4rem;
-    padding: 0 2rem 0 2rem;
     cursor: pointer;
     font-family: 'Laila', sans-serif;
     &:hover{

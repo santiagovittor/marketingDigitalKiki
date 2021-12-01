@@ -158,7 +158,7 @@ const ContactForm = () => {
                             <ErrorMessage name="mensaje" component={() => (
                                 <div className="inputContainer__each--error">{errors.mensaje}</div>
                             )} />
-                            {isValid? (<button className="inputContainer__button" type="submit">Enviar mensaje</button>) : (<button className="inputContainer__button--disabled" type="submit" >Enviar mensaje</button>)}
+                            {isValid? (<button className="inputContainer__button" type="submit">Enviar mail</button>) : (<button className="inputContainer__button--disabled" type="submit" >Enviar mensaje</button>)}
                             {sentForm ?
                                 <div className="inputContainer__successAlert">Recibimos tu mensaje con éxito con el código {messageId}! Nos pondremos en contacto en menos de 24hs.</div>
                                 :

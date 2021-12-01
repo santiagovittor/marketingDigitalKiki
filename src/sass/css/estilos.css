@@ -24,15 +24,257 @@ ul {
   grid-template-areas: "topArea" "intro" "spirit" "brandBanner" "contacto" "footer";
 }
 
+.accessPage {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  background: url(https://images.freeimages.com/images/large-previews/53d/daisies-2-1398443.jpg) center fixed;
+  background-size: cover;
+  place-content: center;
+  font-family: "Laila", sans-serif;
+}
+
+.accessPage__form {
+  display: grid;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  padding: 4rem;
+}
+
+.accessPage__form:hover {
+  transition: 1s;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+}
+
+.accessPage__form--error {
+  color: red;
+  font-size: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accessPage__form--success {
+  color: #20b038;
+  font-size: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accessPage__form input {
+  margin: 0.5rem;
+  font-family: "Laila", sans-serif;
+  border: none;
+  border-bottom: 0.5vh solid #9e9e9e;
+}
+
+.accessPage__form input:focus {
+  outline: none;
+  border-bottom: 0.5vh solid #612851;
+  transition: 0.2s;
+}
+
+.accessPage__form button {
+  place-content: center;
+  border: none;
+  margin: 0.5rem;
+  font-family: "Laila", sans-serif;
+  background-color: #612851;
+  color: white;
+  border-radius: 1vh;
+  height: 1.5rem;
+  width: 90%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.accessPage__form button:hover {
+  filter: saturate(2);
+  transition: 0.5s;
+}
+
+.accessPage__restorePassword {
+  display: grid;
+  grid-template-areas: "restoreTop" "restoreDescription" "restoreInput" "restoreButton";
+  padding: 2rem;
+  max-width: 20rem;
+  gap: 1rem;
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+}
+
+.accessPage__restorePassword:hover {
+  transition: 1s;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+}
+
+.accessPage__restorePassword--header {
+  display: grid;
+  grid-area: restoreTop;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid rgba(89, 89, 89, 0.18);
+}
+
+.accessPage__restorePassword--description {
+  display: grid;
+  grid-area: restoreDescription;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #434343;
+  line-height: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(89, 89, 89, 0.18);
+}
+
+.accessPage__restorePassword--inputBox {
+  display: grid;
+  grid-area: restoreInput;
+  justify-content: start;
+  border-bottom: 1px solid rgba(89, 89, 89, 0.18);
+}
+
+.accessPage__restorePassword--inputBox input {
+  padding-right: 5rem;
+  font-family: "Laila", sans-serif;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 0.5vh solid #9e9e9e;
+}
+
+.accessPage__restorePassword--inputBox input:focus {
+  outline: none;
+  border-bottom: 0.5vh solid #612851;
+  transition: 0.2s;
+  background-color: white;
+}
+
+.accessPage__restorePassword--restoreButton {
+  display: grid;
+  grid-area: restoreButton;
+  margin-top: 2rem;
+}
+
+.accessPage__restorePassword--restoreButton button {
+  height: fit-content;
+  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+  width: 100%;
+  border-radius: 1rem;
+  font-family: "Laila", sans-serif;
+  background-color: #612851;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.accessPage__restorePassword--restoreButton button:hover {
+  filter: saturate(2);
+  transition: 0.5s;
+}
+
+.accessPage__restorePassword--restoreButton #restorePasswordDisabled {
+  display: grid;
+  place-content: center;
+  height: fit-content;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  font-family: "Laila", sans-serif;
+  background-color: #612851;
+  color: white;
+  font-size: 1rem;
+  opacity: 0.5;
+  transition: 1s;
+  cursor: not-allowed;
+}
+
+.accessPage__restorePassword--restoreButtonBack {
+  display: grid;
+  grid-area: restoreButton;
+  gap: 2rem;
+}
+
+.accessPage__restorePassword--restoreButtonBack button {
+  display: grid;
+  place-content: center;
+  height: 2.5rem;
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: none;
+  font-family: "Laila", sans-serif;
+  background-color: #612851;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.accessPage__restorePassword--restoreButtonBack button:hover {
+  filter: saturate(2);
+  transition: 0.5s;
+}
+
+#forgotPasswordLink {
+  margin-left: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  color: #612851;
+  text-decoration: underline;
+}
+
+#registerDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#registerDisabled:hover {
+  filter: none;
+}
+
+@media only screen and (max-width: 320px) {
+  .accessPage__restorePassword {
+    border-radius: 0;
+  }
+}
+
 #landingPage {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  place-content: center;
+  gap: 4rem;
   width: 100%;
   height: 100vh;
   overflow-y: hidden;
-  max-height: 100%;
   filter: saturate(3) blur(1px);
   background: url(https://images.freeimages.com/images/large-previews/53d/daisies-2-1398443.jpg) center fixed;
   background-size: cover;
@@ -41,11 +283,11 @@ ul {
 .button__landing {
   display: grid;
   color: #E1261A;
+  place-content: center;
   border: transparent;
   background-color: transparent;
-  font-size: 6rem;
+  font-size: 2rem;
   border-radius: 4rem;
-  padding: 0 2rem 0 2rem;
   cursor: pointer;
   font-family: 'Laila', sans-serif;
 }
@@ -864,5 +1106,38 @@ header p {
   font-family: 'Laila', sans-serif;
   background-color: #111111;
   box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+}
+
+.jokeContainer {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  background-image: url(https://i.pinimg.com/736x/10/1b/ac/101bac727e8c58648c5e50e9a54d38fa.jpg);
+  background-repeat: repeat;
+  align-items: center;
+  background-color: #242424;
+}
+
+.jokeContainer__main {
+  display: grid;
+  justify-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.jokeContainer__main::after {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
+
+.jokeContainer__main iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=estilos.css.map */
