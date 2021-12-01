@@ -12,7 +12,7 @@ const Register = () => {
     const [errorRegister, setErrorRegister] = useState();
 
 
-
+    
     const register = async () => {
         try {
             const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
