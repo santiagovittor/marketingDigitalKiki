@@ -69,7 +69,7 @@ const Access = () => {
 
                 }
                 
-                <Link to="/login/restore-password" >
+                <Link to="/restore-password" >
                    <p id="forgotPasswordLink"> He olvidado mi contraseña</p>
                     </Link>
                     <Link to="/register" >
