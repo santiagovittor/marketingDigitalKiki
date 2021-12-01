@@ -1,7 +1,7 @@
 import { sendPasswordResetEmail } from "@firebase/auth";
 import { auth } from "../../firebase/firebaseConfig";
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const RestorePassword = () => {
 
@@ -42,12 +42,8 @@ const RestorePassword = () => {
                                     name="correo"
                                     placeholder="Ingresa tu email."
                                     id="correo"
-                                    onChange={(event) => {
-                                        setResetPasswordEmail(event.target.value);
-                                    }}      
+                                    onChange={(event) => {setResetPasswordEmail(event.target.value);}}      
                                 />
-                        
-                    
                                 {sentMail? <p className="accessPage__form--success">El blanqueo se envió correctamente, revise su casilla de correo.</p>: <></>}
                                 {errorSentMail? <p className="accessPage__form--error">{errorSentMail}.</p>: <></>}
                             </div>

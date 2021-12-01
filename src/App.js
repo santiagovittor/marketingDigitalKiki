@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/joke" component={Joke} exact />
         <Route path="/register" component={Register} exact />
         <Route path="/login" component={Access} exact />
-        <Route path="/restore-password" component={RestorePassword} exact />
+        <Route path="/resetpassword" component={RestorePassword} exact />
         <Route path="/main" component={MainPage} exact />
         <Route path="/contacto" component={ContactoPage} exact />
         <Route path="/diseño-web" component={DiseñoWebPage} exact />
