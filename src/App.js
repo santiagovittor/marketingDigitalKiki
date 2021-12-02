@@ -11,12 +11,13 @@ import RestorePassword from "./components/access/RestorePassword";
 import Register from "./components/access/Register";
 import Joke from "./components/joke/Joke";
 
+
 const App = () => {
 
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={LandingPage} exact />
+      <Route path="/" component={LandingPage} exact />
         <Route path="/joke" component={Joke} exact />
         <Route path="/register" component={Register} exact />
         <Route path="/login" component={Access} exact />

@@ -194,6 +194,33 @@ $mainPurple: #612851;
     text-decoration: underline;
 }
 
+.signInWithService{
+    display: flex;
+    justify-content: space-around;
+    grid-template-rows: 1fr;
+    padding-top: 1rem;
+    & button{
+        height: 8vh;
+        width: 8vh;
+        background-color: transparent;    
+    }
+}
+
+.signInWithServiceButton{
+    &__disabled{
+        opacity: 0.5;
+        filter: grayscale(1);
+        & button:hover{
+            filter: none;
+            cursor: not-allowed;
+        }
+    }
+    & img{
+        height: 8vh;
+        width: 8vh;
+    }
+}
+
 #registerDisabled{
     opacity: 0.5;
     cursor: not-allowed;
@@ -209,6 +236,7 @@ $mainPurple: #612851;
     }
     .accessPage__restorePassword{
         border-radius: 0;
+        justify-content: center;
     }
 
 }

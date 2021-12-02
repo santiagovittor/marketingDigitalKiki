@@ -1,7 +1,12 @@
 import { useState } from "react";
-import { signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth"
+import { signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, FacebookAuthProvider } from "firebase/auth"
 import { auth } from "../../firebase/firebaseConfig";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+import googleAuth from "../../assets/svgs/googleAuth.svg";
+import facebookAuth from "../../assets/svgs/facebookAuth.svg";
 
 
 const Access = () => {
@@ -12,9 +17,36 @@ const Access = () => {
     const [loggedUser, setLoggedUser] = useState({});
 
 
+    const signInWithGoogle = () => {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth,provider)
+        .then((re)=>{
+            console.log(re)
+        })
+        .catch((err)=>{
+            console.error(err)
+        })
+    }
+
+    const signInWithFacebook = () => {
+        const provider = new FacebookAuthProvider();
+        signInWithPopup(auth,provider)
+        .then((re)=>{
+            console.log(re)
+        })
+        .catch((err)=>{
+            console.error(err)
+        })
+    }
+
+
     onAuthStateChanged(auth, (currentUser) => {
         setLoggedUser(currentUser)
     });
+
+    useEffect(() =>{
+        AOS.init({duration: 1500})
+    },[]);
 
 
     const logIn = async () => {
@@ -42,7 +74,7 @@ const Access = () => {
     return (
         <>
             <section className="accessPage">
-                <div className="accessPage__form">
+                <div className="accessPage__form" data-aos="fade-in">
                     <h2>Iniciar Sesión</h2>
                     <input
                         type="text"
@@ -75,7 +107,11 @@ const Access = () => {
                     <Link to="/register" >
                         <p id="forgotPasswordLink"> Registrar una nueva cuenta</p>
                     </Link>
-
+                    <h5>O inicia sesión con estos servicios</h5>
+                    <div className="signInWithService">
+                    {loggedUser? <button className="signInWithServiceButton__disabled" ><img src={googleAuth} alt="logo de google para autentificacion"/></button> :<button className="signInWithServiceButton" onClick={signInWithGoogle}><img src={googleAuth} alt="logo de google para autentificacion"/></button>}
+                    {loggedUser? <button className="signInWithServiceButton__disabled" ><img src={facebookAuth} alt="logo de facebook para autentificacion"/></button> :<button className="signInWithServiceButton" onClick={signInWithFacebook} ><img src={facebookAuth} alt="logo de facebook para autentificacion"/></button>}
+                    </div>
                     {loggedUser ?
                         <div>
                             <h4>Usuario logueado: {loggedUser?.email}</h4>

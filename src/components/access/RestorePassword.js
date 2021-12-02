@@ -2,12 +2,23 @@ import { sendPasswordResetEmail } from "@firebase/auth";
 import { auth } from "../../firebase/firebaseConfig";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
+
+
 
 const RestorePassword = () => {
 
     const [sentMail,setSentMail] = useState(false)
     const [resetPasswordEmail, setResetPasswordEmail] = useState();
     const [errorSentMail,setErrorSentMail] = useState()
+
+    useEffect(() =>{
+        AOS.init({duration: 1500})
+    },[]);
+
 
     const resetPassword = async () =>{
 
@@ -26,7 +37,7 @@ const RestorePassword = () => {
     return (
 
         <section className="accessPage">
-            <div className="accessPage__restorePassword">
+            <div className="accessPage__restorePassword" data-aos="fade">
                 <div className="accessPage__restorePassword--header">
                     <h1>Restablecer la contraseña</h1>
                 </div>

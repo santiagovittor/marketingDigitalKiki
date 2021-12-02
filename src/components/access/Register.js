@@ -2,6 +2,11 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { auth } from "../../firebase/firebaseConfig";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
+
 
 
 const Register = () => {
@@ -11,6 +16,10 @@ const Register = () => {
     const [successRegister, setSuccessRegister] = useState("");
     const [errorRegister, setErrorRegister] = useState();
 
+
+    useEffect(() =>{
+        AOS.init({duration: 1500})
+    },[]);
 
     
     const register = async () => {
@@ -34,7 +43,7 @@ const Register = () => {
     return ( 
 
         <section className="accessPage">
-        <div className="accessPage__form">
+        <div className="accessPage__form" data-aos="fade">
 
       <h4>Hola! Aquí puedes</h4>
                 <h2>Registrar tu cuenta</h2>

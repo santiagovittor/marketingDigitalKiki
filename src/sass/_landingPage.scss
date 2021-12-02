@@ -9,18 +9,19 @@ $mainRojo:#E1261A;
     width: 100%;
     height: 100vh;
     overflow-y: hidden;
-    filter: saturate(3) blur(1px);
+    filter: saturate(2) blur(1px);
     background: url(https://images.freeimages.com/images/large-previews/53d/daisies-2-1398443.jpg) center fixed;
     background-size: cover;
 }
 
-.button__landing{
+.buttonLanding{
     display: grid;
     color: $mainRojo;
     place-content: center;
     border: transparent;
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 6rem;
+    padding: 0 4rem 0 4rem;
     border-radius: 4rem;
     cursor: pointer;
     font-family: 'Laila', sans-serif;
@@ -33,6 +34,28 @@ $mainRojo:#E1261A;
         -webkit-backdrop-filter: blur( 3px );
         border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
+    &__client{
+        display: grid;
+    color: $mainRojo;
+    place-content: center;
+    border: transparent;
+    background-color: transparent;
+    font-size: 2rem;
+    padding: 0 4rem 0 4rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    font-family: 'Laila', sans-serif;
+    &:hover{
+        color: #f52d30;
+        transition: .5s;
+        background: rgba( 255, 255, 255, 0.15 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 3px );
+        -webkit-backdrop-filter: blur( 3px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    }
+   
     }
 
 
